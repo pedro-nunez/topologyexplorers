@@ -25,6 +25,8 @@ function goNorth() {
     }
 
     // We open the new location with the computed coordinates
+    // Unless the new coordinates are not valid places to be
+    if (finalX ==
     window.location.href = "_" + finalX.toString() + "_" + finalY.toString() + "_.html"; 
 }
 
