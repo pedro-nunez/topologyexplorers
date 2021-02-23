@@ -1,5 +1,18 @@
 // 16x16 grid, say with X and Y coordinates modulo 17
 
+/* CONTENTS OF THIS FILE:
+ *
+ * isMountain(X,Y) ------ line 14
+ * isLake(X,Y) ---------- line 107
+ * isBlackHole(X,Y) ----- line 192
+ *
+ * goNorth() ------------ line 206
+ * goSouth() ------------ line 241
+ * goEast() ------------- line 276
+ * goWest() ------------- line 333
+ *
+ */
+
 function isMountain(X,Y) {
     // Written all out manually to ensure this also works on IE8 (indexOf wouldn't)
     if (X == 14) {
@@ -178,6 +191,20 @@ function isLake(X,Y) {
     }
 }
 
+function isBlackHole(X,Y) {
+    if (X == 14 && Y == 13) {
+	return true;
+    } else if (X == 1 && Y == 4) {
+	return true;
+    } else if (X == 5 && Y == 7) {
+	return true;
+    } else if (X == 11 && Y == 2) {
+	return true;
+    } else {
+	return false;
+    }
+}
+
 function goNorth() {
     // We collect our current (X,Y) position into variables
     var currentX = parseInt(window.location.href.split("_")[1]);
@@ -208,6 +235,8 @@ function goNorth() {
 	alert("Sorry, you cannot climb up the mountain.");
     } else if (isLake(finalX,finalY)) {
 	alert("Sorry, you cannot swim in the lake.");
+    } else if (isBlackHole(finalX,finalY)) {
+	alert("You see a black hole ahead of you. You better chose a different direction to go!");
     } else {
 	window.location.href = "_" + finalX.toString() + "_" + finalY.toString() + "_.html"; 
     }
@@ -243,6 +272,8 @@ function goSouth() {
 	alert("Sorry, you cannot climb up the mountain.");
     } else if (isLake(finalX,finalY)) {
 	alert("Sorry, you cannot swim in the lake.");
+    } else if (isBlackHole(finalX,finalY)) {
+	alert("You see a black hole ahead of you. You better chose a different direction to go!");
     } else {
 	window.location.href = "_" + finalX.toString() + "_" + finalY.toString() + "_.html"; 
     }
@@ -300,6 +331,8 @@ function goEast() {
 	alert("Sorry, you cannot climb up the mountain.");
     } else if (isLake(finalX,finalY)) {
 	alert("Sorry, you cannot swim in the lake.");
+    } else if (isBlackHole(finalX,finalY)) {
+	alert("You see a black hole ahead of you. You better chose a different direction to go!");
     } else {
 	window.location.href = "_" + finalX.toString() + "_" + finalY.toString() + "_.html"; 
     }
@@ -357,6 +390,8 @@ function goWest() {
 	alert("Sorry, you cannot climb up the mountain.");
     } else if (isLake(finalX,finalY)) {
 	alert("Sorry, you cannot swim in the lake.");
+    } else if (isBlackHole(finalX,finalY)) {
+	alert("You see a black hole ahead of you. You better chose a different direction to go!");
     } else {
 	window.location.href = "_" + finalX.toString() + "_" + finalY.toString() + "_.html"; 
     }
