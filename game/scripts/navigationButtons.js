@@ -2,14 +2,14 @@
 
 /* CONTENTS OF THIS FILE:
  *
- * isMountain(X,Y) ------ line 14
- * isLake(X,Y) ---------- line 107
- * isBlackHole(X,Y) ----- line 192
+ * isMountain(X,Y) ------ line 16
+ * isLake(X,Y) ---------- line 109
+ * isBlackHole(X,Y) ----- line 194
  *
- * goNorth() ------------ line 206
- * goSouth() ------------ line 241
- * goEast() ------------- line 276
- * goWest() ------------- line 333
+ * goNorth() ------------ line 208
+ * goSouth() ------------ line 245
+ * goEast() ------------- line 282
+ * goWest() ------------- line 341
  *
  */
 
