@@ -1,5 +1,98 @@
 // 16x16 grid, say with X and Y coordinates modulo 17
 
+function isMountain(X,Y) {
+    // Written all out manually to ensure this also works on IE8 (indexOf wouldn't)
+    if (X == 14) {
+	if (Y == 16) {
+	    return true;
+	} else if (Y == 12) {
+	    return true;
+	} else if (Y == 11) {
+	    return true;
+	} else if (Y == 3) {
+	    return true;
+	} else if (Y == 1) {
+	    return true;
+	} else if (Y == 5) {
+	    return true;
+	} else if (Y == 8) {
+	    return true;
+	} else if (Y == 10) {
+	    return true;
+	}
+    } else if (X == 7) {
+	if (Y == 13) {
+	    return true;
+	}
+    } else if (X == 4) {
+	if (Y == 15) {
+	    return true;
+	} else if (Y == 14) {
+	    return true;
+	}
+    } else if (X == 12) {
+	if (Y == 11) {
+	    return true;
+	} else if (Y == 4) {
+	    return true;
+	} else if (Y == 3) {
+	    return true;
+	}
+    } else if (X == 10) {
+	if (Y == 15) {
+	    return true;
+	} else if (Y == 7) {
+	    return true;
+	} else if (Y == 1) {
+	    return true;
+	}
+    } else if (X == 5) {
+	if (Y == 16) {
+	    return true;
+	} else if (Y == 1) {
+	    return true;
+	} else if (Y == 13) {
+	    return true;
+	} else if (Y == 14) {
+	    return true;
+	} else if (Y == 2) {
+	    return true;
+	} else if (Y == 10) {
+	    return true;
+	}
+    } else if (X == 15) {
+	if (Y == 12) {
+	    return true;
+	} else if (Y == 7) {
+	    return true;
+	}
+    } else if (X == 11) {
+	if (Y == 12) {
+	    return true;
+	} else if (Y == 5) {
+	    return true;
+	} else if (Y == 13) {
+	    return true;
+	}
+    } else if (X == 16) {
+	if (Y == 12) {
+	    return true;
+	} else if (Y == 15) {
+	    return true;
+	} else if (Y == 7) {
+	    return true;
+	} else if (Y == 1) {
+	    return true;
+	} else if (Y == 8) {
+	    return true;
+	} else if (Y == 13) {
+	    return true;
+	}
+    } else {
+	return false;
+    }
+}
+
 function goNorth() {
     // We collect our current (X,Y) position into variables
     var currentX = parseInt(window.location.href.split("_")[1]);
@@ -26,8 +119,11 @@ function goNorth() {
 
     // We open the new location with the computed coordinates
     // Unless the new coordinates are not valid places to be
-    if (finalX ==
-    window.location.href = "_" + finalX.toString() + "_" + finalY.toString() + "_.html"; 
+    if (isMountain(finalX,finalY)) {
+	alert("Sorry, you cannot go up the mountain.");
+    } else {
+	window.location.href = "_" + finalX.toString() + "_" + finalY.toString() + "_.html"; 
+    }
 }
 
 function goSouth() {
@@ -55,7 +151,12 @@ function goSouth() {
     }
 
     // We open the new location with the computed coordinates
-    window.location.href = "_" + finalX.toString() + "_" + finalY.toString() + "_.html"; 
+    // Unless the new coordinates are not valid places to be
+    if (isMountain(finalX,finalY)) {
+	alert("Sorry, you cannot go up the mountain.");
+    } else {
+	window.location.href = "_" + finalX.toString() + "_" + finalY.toString() + "_.html"; 
+    }
 }
 
 function goEast() {
@@ -105,7 +206,12 @@ function goEast() {
     }
 
     // We open the new location with the computed coordinates
-    window.location.href = "_" + finalX.toString() + "_" + finalY.toString() + "_.html"; 
+    // Unless the new coordinates are not valid places to be
+    if (isMountain(finalX,finalY)) {
+	alert("Sorry, you cannot go up the mountain.");
+    } else {
+	window.location.href = "_" + finalX.toString() + "_" + finalY.toString() + "_.html"; 
+    }
 }
 
 function goWest() {
@@ -155,5 +261,10 @@ function goWest() {
     }
 
     // We open the new location with the computed coordinates
-    window.location.href = "_" + finalX.toString() + "_" + finalY.toString() + "_.html"; 
+    // Unless the new coordinates are not valid places to be
+    if (isMountain(finalX,finalY)) {
+	alert("Sorry, you cannot go up the mountain.");
+    } else {
+	window.location.href = "_" + finalX.toString() + "_" + finalY.toString() + "_.html"; 
+    }
 }
