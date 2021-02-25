@@ -19,5 +19,24 @@
 	<h3>You are at the base camp.</h3>
 	<p>Discuss possible plans with your fellow explorers and get ready to depart in the morning.</p>
 	<div id="navigationButtonsDivision"></div>
+	<p>There is a hellicopter at your disposal, but it has limited fuel.</br>
+	Make sure to use it only if you know where you are going!</p>
+	<button onclick="flyTo()">I know where I want to go</button>
+    <script>
+	function flyTo() {
+	    var coordinates = prompt("Please enter a valid location:", "");
+	    if (coordinates == "5.822, -5.763") {
+		window.location.href = "_7_11_.html";
+	    } else if (coordinates == "-3.817, 4.027") {
+		window.location.href = "_13_6_.html";
+	    } else if (coordinates == "4.492, 4.934") {
+		window.location.href = "_13_4_.html";
+	    } else if (coordinates == "-4.352, -4.119") {
+		window.location.href = "_4_13_.html";
+	    } else {
+		alert("Sorry, not a valid location.");
+	    }
+	}
+    </script>
 
 </html>
