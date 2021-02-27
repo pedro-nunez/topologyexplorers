@@ -2,20 +2,229 @@
 <html lang="en">
 
     <head>
+    <meta charset="UTF-8">
     <link href="../styles.css" rel="stylesheet">
     <script src="../scripts/jquery-3.5.1.min.js"></script>
     <script>
 	jQuery(function(){
 	    jQuery("#metaButtonsDivision").load("../metaButtons.html");
-	    jQuery("#navigationButtonsDivision").load("../navigationButtons.html");
 	});
     </script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     </head>
 
     <body style="text-align: center;">
     <div id="metaButtonsDivision"></div>
+    <h3>A gate blocks your way west.</h3>
+    <p>The guardians of the gate approach you:</br>
+    &quotBehind this gate lies a sacred valley.
+    In order to let you in, you will have to prove that you are trustworthy as a group.
+    Talking to some of your fellow explorers, they have mentioned to us some theorems that they liked.
+    Can you guess who mentioned what theorem?&quot</p></br>
+    
+    <button data-modal-target="#appellHumbertButton">Theorem of Appell-Humbert</button>
+    <div class="modal" id="appellHumbertButton">
+	<div class="modal-header">
+	    <div>An explanation:</div>
+	    <button data-close-button class="close-button">&times;</button>
+	</div>
+	<div class="modal-body">
+	    <p>Let \(X\) be a complex manifold, \(Pic(X)\) its group of holomorphic line bundles. By definition, the <em>Néron-Severi group</em> is the image of \(c1 : Pic(X) \to H^{2}(X,\mathbb{Z})\). Therefore, the exponential sequence gives rise to a short exact sequence
+	    \[ 0 \to Pic^{0}(X) \to Pic(X) \to NS(X) \to 0, \]
+	    where \(Pic^{0}(X)\) is the subgroup of line bundles with vanishing first Chern class.</br></br>
+	    
+	    <strong>Theorem of Appell-Humbert.</strong></br>
+	    Let \(X = \mathbb{C}^{g} /\Lambda\) be a complex torus. Let
+	    <ul>
+	    <li>\(Herm(X)\) be the group of Hermitian forms \(H : \mathbb{C}^{g} \times \mathbb{C}^{g} \to \mathbb{C}\) such that \(E(\Lambda \times \Lambda) \subset \mathbb{Z}\), where \(E\) is the imaginary part of \(H\) (which is an alternating form);</li>
+	    <li>\(AH(X)\) be the group of pairs \((H, \rho)\), where \(H \in Herm(X)\) and \(\rho : \Lambda \to S^{1}\) is a <em>semicharacter</em> for \(H\), that is a character up to a sign, in the following sense:
+	    \[ \forall \lambda_{1}, \lambda_{2} \in \Lambda : \rho(\lambda_{1} + \lambda_{2} ) = \rho(\lambda_{1})\rho(\lambda_{2}) \cdot exp(\pi i \cdot E(\lambda_{1} , \lambda_{2} )). \]
+	    Here, the group law on \(AH(X)\) is defined to be
+	    \[ (H_{1} , \rho_{1} )(H_{2} , \rho_{2}) := (H_{1} + H_{2}, \rho_{1} \rho_{2} ). \]
+	    Then there is a canonical isomorphism
+	    \[ Herm(X) \to NS(X) \]
+	    and a canonical map
+	    \[ AH(X) \to Pic(X), \]
+	    such that its restriction to \(Hom(\Lambda, S^{1} )\subset AH(X)\) induces an isomorphism \(Hom(\Lambda, S^{1}) \to Pic^{0}(X)\).
+	    Moreover, the resulting diagram commutes:
+	    \[ \begin{array}{ccccccccc}
+	    0 & \to & Hom(\Lambda, S^{1}) & \to & AH(X) & \to & Herm(X) & \to & 0 \\
+	    & & \downarrow & & \downarrow & & \downarrow & & \\
+	    0 & \to & Pic^{0}(X) & \to & Pic(X) & \to & NS(X) & \to & 0
+	    \end{array}\]
+	    In particular, the map \(AH(X)\to Pic(X)\) is an isomorphism, too.</br></br>
+	    <strong>Comments.</strong> As we learned in the Wednesday seminar on intermediate Jacobians, there is a canonical isomorphism
+	    \[ H^{2}(X,\mathbb{Z})\cong \bigwedge^{2}Hom(\Lambda,\mathbb{Z}). \]
+	    Thus we may identify \(NS(X)\) with a subgroup of \(Hom(\Lambda, \mathbb{Z})\). Tensoring this subgroup with \(\mathbb{R}\), we obtain an alternating form \(\mathbb{C}^{g} \times \mathbb{C}^{g} \to \mathbb{R}\), which maps \(\Lambda\times \Lambda\) to \(\mathbb{Z}\). This alternating form is the imaginary part of a Hermitian form \(\mathbb{C}^{g} \times \mathbb{C}^{g} \to \mathbb{C}\), which explains \(Herm(X) \cong NS(X)\).</br></br>
+	    The map \(AH(X) \to Pic(X)\) is given by
+	    \[ (H,\rho)\mapsto (\mathbb{C}^{g}\times \mathbb{C})/\Lambda, \]
+	    where \(\Lambda\) acts on \(\mathbb{C}^{g}\times \mathbb{C}\) by \(\lambda(z,t) := \left( z+\lambda, \rho(\lambda)\cdot exp\left(\pi H(z,\lambda)+\frac{\pi}{2}H(\lambda,\Lambda)\right)\cdot t\right)\).
+</p>
+	</div>
+    </div>
+    <div id="overlay"></div></br>
+    <select name="appellHumbert" id="appellHumbert" style="margin: 10px">
+	<option value="none" selected disabled hidden>
+	Who said it?
+	</option>
+	<option value="severin">Severin Barmeier</option>
+	<option value="lukas">Lukas Braun</option>
+	<option value="oliver">Oliver Bräunling</option>
+	<option value="johan">Johannes Commelin</option>
+	<option value="andreas">Andreas Demleitner</option>
+	<option value="ksenia">Ksenia Fedosova</option>
+	<option value="vera">Vera Gahlen</option>
+	<option value="vincent">Vincent Gajda</option>
+	<option value="sebastian">Sebastian Goette</option>
+	<option value="tanuj">Tanuj Gomez</option>
+	<option value="nadine">Nadine Große</option>
+	<option value="andriy">Andriy Haydys</option>
+	<option value="fritz">Fritz Hörmann</option>
+	<option value="annette">Annette Huber-Klawitter</option>
+	<option value="stefan">Stefan Kebekus</option>
+	<option value="fabian">Fabian Kertels</option>
+	<option value="jonasL">Jonas Lenthe</option>
+	<option value="jin">Jin Li</option>
+	<option value="nicola">Nicola Nesa</option>
+	<option value="pedro">Pedro Núñez</option>
+	<option value="leonardo">Leonardo Patimo</option>
+	<option value="jonasS">Jonas Schnitzer</option>
+	<option value="wolfgang">Wolfgang Soergel</option>
+	<option value="luca">Luca Terenzi</option>
+	<option value="mara">Mara Ungureanu</option>
+	<option value="katrin">Katrin Wendland</option>
+	<option value="ivan">Giovanni Zaccanelli</option>
+	<option value="nobody">Nobody</option>
+    </select></br></br>
+    
+    <button data-modal-target="#atiyahSingerButton">The Atiyah-Singer index theorem</button>
+    <div class="modal" id="atiyahSingerButton">
+	<div class="modal-header">
+	    <div>An explanation:</div>
+	    <button data-close-button class="close-button">&times;</button>
+	</div>
+	<div class="modal-body">
+	    <p>This theorem relates functional analysis with algebraic topology and sometimes even with geometry. It says that the Fredholm index of an elliptic differential operator \(D\) on a compact manifold \(M\) equals the K-theoretic pushdown of its principal symbol from \(T^{*}M\) to a point. If \(D\) happens to be geometric (like the Hodge-de Rham operator on a Riemannian manifold or the Dolbeault operator on a Kähler manifold), then there is also a geometric expression for the index as an integral of a curvature quantity over \(M\).</p>
+	</div>
+    </div>
+    <div id="overlay"></div></br>
+    <select name="atiyahSinger" id="atiyahSinger" style="margin: 10px">
+	<option value="none" selected disabled hidden>
+	Who said it?
+	</option>
+	<option value="severin">Severin Barmeier</option>
+	<option value="lukas">Lukas Braun</option>
+	<option value="oliver">Oliver Bräunling</option>
+	<option value="johan">Johannes Commelin</option>
+	<option value="andreas">Andreas Demleitner</option>
+	<option value="ksenia">Ksenia Fedosova</option>
+	<option value="vera">Vera Gahlen</option>
+	<option value="vincent">Vincent Gajda</option>
+	<option value="sebastian">Sebastian Goette</option>
+	<option value="tanuj">Tanuj Gomez</option>
+	<option value="nadine">Nadine Große</option>
+	<option value="andriy">Andriy Haydys</option>
+	<option value="fritz">Fritz Hörmann</option>
+	<option value="annette">Annette Huber-Klawitter</option>
+	<option value="stefan">Stefan Kebekus</option>
+	<option value="fabian">Fabian Kertels</option>
+	<option value="jonasL">Jonas Lenthe</option>
+	<option value="jin">Jin Li</option>
+	<option value="nicola">Nicola Nesa</option>
+	<option value="pedro">Pedro Núñez</option>
+	<option value="leonardo">Leonardo Patimo</option>
+	<option value="jonasS">Jonas Schnitzer</option>
+	<option value="wolfgang">Wolfgang Soergel</option>
+	<option value="luca">Luca Terenzi</option>
+	<option value="mara">Mara Ungureanu</option>
+	<option value="katrin">Katrin Wendland</option>
+	<option value="ivan">Giovanni Zaccanelli</option>
+	<option value="nobody">Nobody</option>
+    </select></br></br>
+    
+    <button data-modal-target="#belyiButton">Belyi's Theorem</button>
+    <div class="modal" id="belyiButton">
+	<div class="modal-header">
+	    <div>An explanation:</div>
+	    <button data-close-button class="close-button">&times;</button>
+	</div>
+	<div class="modal-body">
+	    <p>Let \(X\) be an integral smooth proper curve over the complex numbers. Then \(X\) arises as a base change from a curve defined over a number field if and only if there exists a morphism
+	    \[ X \dashrightarrow \mathbb{P}^{1} \]
+	    ramified in at most three points (which wlog can be taken to be \(0\),\(1\),\(\infty\))</br></br>
+	    <a href="https://arxiv.org/pdf/math/0108222.pdf">https://arxiv.org/pdf/math/0108222.pdf</a></br></br>
+	    As a result of it, one can show (using various other theorems) that there is an injective group hom
+	    \[ Gal(\overline{\mathbb{Q}} / \mathbb{Q}) \dashrightarrow \text{Outer automorphism group of the free profinite group on 2 generators} \]
+	    and refining what the image is leads to the profinite Grothendieck-Teichmüller group, which some people conjecture to be isomorphic to \(Gal(\overline{\mathbb{Q}}/\mathbb{Q})\)</p>
+	</div>
+    </div>
+    <div id="overlay"></div></br>
+    <select name="belyi" id="belyi" style="margin: 10px">
+	<option value="none" selected disabled hidden>
+	Who said it?
+	</option>
+	<option value="severin">Severin Barmeier</option>
+	<option value="lukas">Lukas Braun</option>
+	<option value="oliver">Oliver Bräunling</option>
+	<option value="johan">Johannes Commelin</option>
+	<option value="andreas">Andreas Demleitner</option>
+	<option value="ksenia">Ksenia Fedosova</option>
+	<option value="vera">Vera Gahlen</option>
+	<option value="vincent">Vincent Gajda</option>
+	<option value="sebastian">Sebastian Goette</option>
+	<option value="tanuj">Tanuj Gomez</option>
+	<option value="nadine">Nadine Große</option>
+	<option value="andriy">Andriy Haydys</option>
+	<option value="fritz">Fritz Hörmann</option>
+	<option value="annette">Annette Huber-Klawitter</option>
+	<option value="stefan">Stefan Kebekus</option>
+	<option value="fabian">Fabian Kertels</option>
+	<option value="jonasL">Jonas Lenthe</option>
+	<option value="jin">Jin Li</option>
+	<option value="nicola">Nicola Nesa</option>
+	<option value="pedro">Pedro Núñez</option>
+	<option value="leonardo">Leonardo Patimo</option>
+	<option value="jonasS">Jonas Schnitzer</option>
+	<option value="wolfgang">Wolfgang Soergel</option>
+	<option value="luca">Luca Terenzi</option>
+	<option value="mara">Mara Ungureanu</option>
+	<option value="katrin">Katrin Wendland</option>
+	<option value="ivan">Giovanni Zaccanelli</option>
+	<option value="nobody">Nobody</option>
+    </select></br></br>
+    
+    <div id="checkTheoremsDivision" style="margin: 10px">
+	<button id="checkTheorems" onclick="checkTheorems()">Confirm answer</button>
+	<script>
+	    function checkTheorems() {
+		var correctAnswers = 0;
+		if (document.getElementById("appellHumbert").value == "andreas") {
+		    correctAnswers +=1;
+		}
+		if (document.getElementById("atiyahSinger").value == "sebastian") {
+		    correctAnswers +=1;
+		}
+		if (document.getElementById("belyi").value == "oliver") {
+		    correctAnswers +=1;
+		}
+		if (correctAnswers == 10) {
+		    alert("Congratulations! You have gained the trust of the locals. You may go west now.")
+		    document.getElementById("goWest").style.display = "inline";
+		} else {
+		    alert("Sorry, try again!")
+		}
+	    }
+	</script>
+    </div>
     <p>You see mountains to the south, to the northwest and to the north.</p>
-    <div id="navigationButtonsDivision"></div>
+    <div id="navigationButtonsDivision">
+	<script src="../scripts/navigationButtons.js"></script>
+	<button id="goWest" style="display: none;" onclick="goWest()">Go west</button>
+	<button id="goNorth" onclick="goNorth()">Go north</button>
+	<button id="goSouth" onclick="goSouth()">Go south</button>
+	<button id="goEast" onclick="goEast()">Go east</button>
+    </div>
     </body>
 
 </html>

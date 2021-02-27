@@ -210,24 +210,12 @@ function goNorth() {
     var currentX = parseInt(window.location.href.split("_")[1]);
     var currentY = parseInt(window.location.href.split("_")[2]);
 
-    // If we are on the base camp (iff Y==0), we first pass from (0,0) to (1,1) to compute
-    if (currentY == 0) {
-	currentX = 1;
-	currentY = 1;
-    }
-
     // We increase Y by multiplying with 7 modulo 17
     var newY = currentY*7%17;
 
     // We store the new coordinates into a new pair of variables
-    // If we were going to land on (1,1), we set them to (0,0) instead
-    if (currentX == 1 && newY == 1) {
-	var finalX = 0;
-	var finalY = 0;
-    } else {
-	var finalX = currentX;
-	var finalY = newY;
-    }
+    var finalX = currentX;
+    var finalY = newY;
 
     // We open the new location with the computed coordinates
     // Unless the new coordinates are not valid places to be
@@ -247,24 +235,12 @@ function goSouth() {
     var currentX = parseInt(window.location.href.split("_")[1]);
     var currentY = parseInt(window.location.href.split("_")[2]);
 
-    // If we are on the base camp (iff Y==0), we first pass from (0,0) to (1,1) to compute
-    if (currentY == 0) {
-	currentX = 1;
-	currentY = 1;
-    }
-
     // We decrease Y by dividing by 7 modulo 17
     var newY = currentY*5%17;
 
     // We store the new coordinates into a new pair of variables
-    // If we were going to land on (1,1), we set them to (0,0) instead
-    if (currentX == 1 && newY == 1) {
-	var finalX = 0;
-	var finalY = 0;
-    } else {
-	var finalX = currentX;
-	var finalY = newY;
-    }
+    var finalX = currentX;
+    var finalY = newY;
 
     // We open the new location with the computed coordinates
     // Unless the new coordinates are not valid places to be
@@ -284,22 +260,12 @@ function goEast() {
     var currentX = parseInt(window.location.href.split("_")[1]);
     var currentY = parseInt(window.location.href.split("_")[2]);
 
-    // If we are on the base camp (iff Y==0), we first pass from (0,0) to (1,1) to compute
-    if (currentY == 0) {
-	currentX = 1;
-	currentY = 1;
-    }
-
     // We increase X by multiplying with 3 modulo 17
     var newX = currentX*3%17;
 
     // We store the new coordinates into a new pair of variables
-    // If we were going to land on (1,1), we set them to (0,0) instead
     // If we were on the right border of the grid, we swap the Y coordinate
-    if (newX == 1 && currentY == 1) {
-	var finalX = 0;
-	var finalY = 0;
-    } else if (currentX == 16) {
+    if (currentX == 16) {
 	var dictSwapY = {
 	    16: 10,
 	    12: 2,
@@ -343,22 +309,12 @@ function goWest() {
     var currentX = parseInt(window.location.href.split("_")[1]);
     var currentY = parseInt(window.location.href.split("_")[2]);
 
-    // If we are on the base camp (iff Y==0), we first pass from (0,0) to (1,1) to compute
-    if (currentY == 0) {
-	currentX = 1;
-	currentY = 1;
-    }
-
     // We decrease X by dividing by 3 modulo 17
     var newX = currentX*6%17;
 
     // We store the new coordinates into a new pair of variables
-    // If we were going to land on (1,1), we set them to (0,0) instead
     // If we were on the left border of the grid, we swap the Y coordinate
-    if (newX == 1 && currentY == 1) {
-	var finalX = 0;
-	var finalY = 0;
-    } else if (currentX == 14) {
+    if (currentX == 14) {
 	var dictSwapY = {
 	    16: 10,
 	    12: 2,
