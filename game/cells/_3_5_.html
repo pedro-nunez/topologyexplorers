@@ -14,6 +14,36 @@
 
     <body style="text-align: center;">
     <div id="metaButtonsDivision"></div>
+    <div id="encounter">
+    <p>An old lady approaches you:</br>
+    &quotSo you come from Freiburg, you say?</br>
+    If you look at the Freiburger Münster from its main entrance, where would its most famous gargoyle be?&quot</p>
+    <select id="answer" style="margin: 10px;">
+		<option value="none" selected disabled hidden>
+		Choose an answer</option>
+		<option value="front">Right above you</option>
+		<option value="left">On the left side of the Münster</option>
+		<option value="right">On the right side of the Münster</option>
+    </select>
+    <div style="margin: 10px;">
+    	<button id="check" onclick="checkAnswer()">Confirm answer</button>
+    	<script>
+    		var attempts = 0;
+    		function checkAnswer() {
+    			if (document.getElementById("answer").value == "right") {
+    				alert("Correct! The old path that you are looking for did not pass by here, no.\nBy the way, did you know about the previous group of explorers? I think they used to have a base camp somewhere southeast from here.");
+    				document.getElementById("encounter").style.display = "none";
+    			} else if (attempts == 0) {
+    				attempts +=1;
+    				alert("Incorrect. But okay, we all have memory slips now and then. Would you like to try again?")
+    			} else {
+    				alert("Still incorrect... Sorry, I gotta go now.");
+    				document.getElementById("encounter").style.display = "none";
+    			}
+    		}
+    	</script>
+    </div>
+    </div>
     <p>You see a nice landscape, but no particular geographic detail catches the eye.</p>
     <div id="navigationButtonsDivision"></div>
     </body>

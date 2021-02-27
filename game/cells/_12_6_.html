@@ -14,6 +14,36 @@
 
     <body style="text-align: center;">
     <div id="metaButtonsDivision"></div>
+    <div id="encounter">
+    <p>An old lady approaches you:</br>
+    &quotSo you come from Freiburg, you say?</br>
+    When were the Freiburger Bächle first mentioned?&quot</p>
+    <select id="answer" style="margin: 10px;">
+		<option value="none" selected disabled hidden>
+		Choose an answer</option>
+		<option value="incorrect">1170</option>
+		<option value="incorrect">1313</option>
+		<option value="correct">1220</option>
+    </select>
+    <div style="margin: 10px;">
+    	<button id="check" onclick="checkAnswer()">Confirm answer</button>
+    	<script>
+    		var attempts = 0;
+    		function checkAnswer() {
+    			if (document.getElementById("answer").value == "correct") {
+    				alert("Correct! The old path that you are looking for did not pass by here, no.\nBy the way, did you know about the previous group of explorers? I think they used to have a base camp somewhere southwest from here.");
+    				document.getElementById("encounter").style.display = "none";
+    			} else if (attempts == 0) {
+    				attempts +=1;
+    				alert("Incorrect. But okay, we all have memory slips now and then. Would you like to try again?")
+    			} else {
+    				alert("Still incorrect... Sorry, I gotta go now.");
+    				document.getElementById("encounter").style.display = "none";
+    			}
+    		}
+    	</script>
+    </div>
+    </div>
     <p>You see a nice landscape, but no particular geographic detail catches the eye.</p>
     <div id="navigationButtonsDivision"></div>
     </body>

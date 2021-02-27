@@ -14,6 +14,36 @@
 
     <body style="text-align: center;">
     <div id="metaButtonsDivision"></div>
+    <div id="encounter">
+    <p>An old man approaches you:</br>
+    &quot;So you come from Freiburg, you say?</br>
+    Where was iron ore extracted in a mine between 1937 and 1942?&quot;</p>
+    <select id="answer" style="margin: 10px;">
+		<option value="none" selected disabled hidden>
+		Choose an answer</option>
+		<option value="correct">Schönberg</option>
+		<option value="incorrect">Tuniberg</option>
+		<option value="incorrect">Schlossberg</option>
+    </select>
+    <div style="margin: 10px;">
+    	<button id="check" onclick="checkAnswer()">Confirm answer</button>
+    	<script>
+    		var attempts = 0;
+    		function checkAnswer() {
+    			if (document.getElementById("answer").value == "correct") {
+    				alert("Correct! The old path that you are looking for did not pass by here, no.\nBy the way, did you know about the previous group of explorers? I think they used to have a base camp somewhere southeast from here.");
+    				document.getElementById("encounter").style.display = "none";
+    			} else if (attempts == 0) {
+    				attempts +=1;
+    				alert("Incorrect. But okay, we all have memory slips now and then. Would you like to try again?")
+    			} else {
+    				alert("Still incorrect... Sorry, I gotta go now.");
+    				document.getElementById("encounter").style.display = "none";
+    			}
+    		}
+    	</script>
+    </div>
+    </div>
     <p>You see mountains to the southwest, to the west and to the northwest.</p>
     <div id="navigationButtonsDivision"></div>
     </body>
