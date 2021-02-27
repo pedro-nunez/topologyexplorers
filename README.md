@@ -1,11 +1,12 @@
 # Topology Explorers
 
-JavaScript game for virtual Oberharmersbach 2021
+HTML game for virtual Oberharmersbach 2021
 
 # TO-DO
 
-- [x] Add conditional statement to navigation buttons: if about to enter in a forbidden area, change the functionality instead!
-- [ ] Create secondary camps. History: seems like an abandoned base camp of a previous team of explorers. There is a hellicopter with a full tank. You can use it to move back and forth between base camps!
-- [ ] Think of names for the creatures.
-- [ ] Near the start: a creature telling you about the name of the area ("invariant planes"?). Give option to say: "cool thanks" (creature says btw the path is here). Maybe input the answer as a text and look for the string "thank". If so what was chosen, creature leaves and buttons disappear for 5 min.
-- [ ] Create geography flavours.
+- [ ] Somewhere, someone telling you about the name of the area ("invariant planes"?). Give option to say: "cool thanks" (creature says btw the path is here). Maybe input the answer as a text and look for the string "thank". If so what was chosen, creature leaves and buttons disappear for 5 min.
+- [ ] Chess puzzle.
+- [ ] Go puzzle.
+- [ ] 30 questions about Freiburg and its history from the Freiburg quiz (add to credits!). Marked with white rhombi, they give extra hints about the location of abandonde base camps and background story. Asked by old people.
+- [ ] Add smoke column in the chosen mountain; edit montain cell to meet the old group of explorers.
+- [ ] Some science questions asked by scientists, marked with green rhombi, they give extra hints about the amount and location of black holes.
