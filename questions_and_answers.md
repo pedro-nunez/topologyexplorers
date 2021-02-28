@@ -54,6 +54,9 @@ A(11_4) \(0\)&deg;C and low pressure
 Q(11_1) In which layer of the atmosphere are we? &copy;Saber y Beber
 A(11_1) Troposphere
 
+Q(15_14) What major extinction event killed the highest percentage of species?
+A(15_14) Permian–Triassic extinction event
+
 Q(16_2) At the end of 2015, the Hubble Space Telescope detected a supernova explosion at the exact time and location predicted by some astronomers. How were they able to predict this supernova?
 A(16_2) They had seen the same star explode several times the year before
 
