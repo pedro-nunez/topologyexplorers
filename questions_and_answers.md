@@ -60,6 +60,9 @@ A(15_14) Permian–Triassic extinction event
 Q(16_2) At the end of 2015, the Hubble Space Telescope detected a supernova explosion at the exact time and location predicted by some astronomers. How were they able to predict this supernova?
 A(16_2) They had seen the same star explode several times the year before
 
+Q(16_5) Which one of the following stars does not belong to the summer triangle?
+A(16_5) Arcturus
+
 ### Freiburg questions &copy;[Breisgau-Geschichtsverein Schauinsland](https://www.breisgau-geschichtsverein.de/de/freiburg-quiz/archiv.php)
 
 Q(14,6) Where was the oldest building so far archaeologically excavated in Freiburg?
