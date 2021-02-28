@@ -10,10 +10,40 @@
 	    jQuery("#navigationButtonsDivision").load("../navigationButtons.html");
 	});
     </script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     </head>
 
     <body style="text-align: center;">
     <div id="metaButtonsDivision"></div>
+    <div id="encounter">
+    <p>You meet a scientist who decides to test you before sharing information with you.</br>
+    &quotWater is poured into a \(1m^{3}\) cubic container from a height of \(2m\) and from a tap with a circular opening of \(2cm\) in diameter.</br>
+    The container sits on top of a scale that was calibrated to measure \(0kg\) when the container was empty.</br>
+    Let's say the water pours continuously and the container was empty when it started pouring.</br>
+    If we want to end up with \(5kg\) of water inside the container, what should the scale read at the time in which we decide to close the tap and stop the flow of water?&quot</p>
+    <select id="answer" style="margin: 10px;">
+		<option value="none" selected disabled hidden>
+		Choose an answer</option>
+		<option value="incorrect">It is impossible to achieve that</option>
+		<option value="correct">The scale should read 5kg at that time</option>
+		<option value="incorrect">The scale should read less than 5kg at that time</option>
+    </select>
+    <div style="margin: 10px;">
+    	<button id="check" onclick="checkAnswer()">Confirm answer</button>
+    	<script>
+    		function checkAnswer() {
+    			if (document.getElementById("answer").value == "correct") {
+    				alert("Correct! The old path that you are looking for used to pass by here, yes.\nHave you heard about the black holes around here? I have been studying one of them recently, it is somewhere north from here.");
+    				document.getElementById("encounter").style.display = "none";
+    			} else {
+    				alert("Incorrect... Sorry, I gotta go back to the lab now.");
+    				document.getElementById("encounter").style.display = "none";
+    			}
+    		}
+    	</script>
+    </div>
+    </div>
     <p>You see a nice landscape, but no particular geographic detail catches the eye.</p>
     <div id="navigationButtonsDivision"></div>
     </body>

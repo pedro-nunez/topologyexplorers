@@ -10,10 +10,38 @@
 	    jQuery("#navigationButtonsDivision").load("../navigationButtons.html");
 	});
     </script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     </head>
 
     <body style="text-align: center;">
     <div id="metaButtonsDivision"></div>
+    <div id="encounter">
+    <p>You meet a scientist who decides to test you before sharing information with you.</br>
+    &quot;At the end of 2015, the Hubble Space Telescope detected a supernova explosion at the exact time and location predicted by some astronomers.
+    How were they able to predict this supernova?&quot;</p>
+    <select id="answer" style="margin: 10px;">
+		<option value="none" selected disabled hidden>
+		Choose an answer</option>
+		<option value="incorrect">Monitoring the brightness of the star and comparing it with data from other recorded supernovas</option>
+		<option value="correct">They had seen the same star explode several times the year before</option>
+		<option value="incorrect">Thanks to very expensive computer simulations</option>
+    </select>
+    <div style="margin: 10px;">
+    	<button id="check" onclick="checkAnswer()">Confirm answer</button>
+    	<script>
+    		function checkAnswer() {
+    			if (document.getElementById("answer").value == "correct") {
+    				alert("Correct! The old path that you are looking for used to pass by here, yes.\nHave you heard about the black holes around here? I have been studying one of them recently, it is somewhere southeast from here.");
+    				document.getElementById("encounter").style.display = "none";
+    			} else {
+    				alert("Incorrect... Sorry, I gotta go back to the lab now.");
+    				document.getElementById("encounter").style.display = "none";
+    			}
+    		}
+    	</script>
+    </div>
+    </div>
     <p>You see mountains to the east, to the southeast and far away to the north.</p>
     <div id="navigationButtonsDivision"></div>
     </body>

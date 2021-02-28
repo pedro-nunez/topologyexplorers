@@ -9,4 +9,4 @@ HTML game for virtual Oberharmersbach 2021
 - [ ] Go puzzle.
 - [x] 30 questions about Freiburg and its history from the Freiburg quiz (add to credits!). Marked with white rhombi, they give extra hints about the location of abandonde base camps and background story. Asked by old people.
 - [ ] Add smoke column in the chosen mountain; edit montain cell to meet the old group of explorers.
-- [ ] Some science questions asked by scientists, marked with green rhombi, they give extra hints about the amount and location of black holes.
+- [x] 20 science questions asked by scientists, marked with green rhombi, they give extra hints about the amount and location of black holes.
