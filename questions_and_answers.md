@@ -4,7 +4,7 @@
 
 ### Science questions
 Q(14_2) What is the phase transition from gas to plasma called? ©Saber y Beber
-A(14_14) Ionization
+A(14_2) Ionization
 
 Q(8_4) What planet has the coldest spot in the solar system? ©Saber y Beber
 A(8_4) Earth
