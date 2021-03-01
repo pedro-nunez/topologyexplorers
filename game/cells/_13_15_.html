@@ -10,10 +10,46 @@
 	    jQuery("#navigationButtonsDivision").load("../navigationButtons.html");
 	});
     </script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     </head>
 
     <body style="text-align: center;">
     <div id="metaButtonsDivision"></div>
+    <div id="encounter">
+    <p>You meet a fellow mathematician who decides to test you before telling you about the path.</br>
+    &quot;Have you heard about the Invariance Principle?
+    If there is repetition, look for what does not change!
+    For example, let \(0 < b < a\) be real numbers.
+    Their <em>harmonic mean</em> is defined as
+    \[ \frac{2ab}{a+b}, \]
+    and it is trictly less than the usual arithmetic mean.
+    Suppose we define then two sequences \((x_{n})_{n\in \mathbb{N}}\) and \((y_{n})_{n\in \mathbb{N}}\) by setting \(x_{0}=a\), \(y_{0}=b\),
+    \[ x_{n+1}=\frac{x_{n}+y_{n}}{2} \text{ and }y_{n+1}=\frac{2x_{n}y_{n}}{x_{n}+y_{n}}. \]
+    What is the limit of each sequence?&quot;</p>
+    <select id="answer" style="margin: 10px;">
+		<option value="none" selected disabled hidden>
+		Choose an answer</option>
+		<option value="incorrect">Both converge to zero</option>
+		<option value="correct">Both converge to the square root of ab</option>
+		<option value="incorrect">The y sequence converges to 0 and the x sequence converges to the square root of ab</option>
+		<option value="incorrect">The y sequence converges to the square root of ab and the x sequence converges to ab</option>
+    </select>
+    <div style="margin: 10px;">
+    	<button id="check" onclick="checkAnswer()">Confirm answer</button>
+    	<script>
+    		function checkAnswer() {
+    			if (document.getElementById("answer").value == "correct") {
+    				alert("Correct! The old path that you are looking for used to pass by here, yes.");
+    				document.getElementById("encounter").style.display = "none";
+    			} else {
+    				alert("Incorrect... Sorry, I gotta go back to my blackboard now.");
+    				document.getElementById("encounter").style.display = "none";
+    			}
+    		}
+    	</script>
+    </div>
+    </div>
     <p>You see mountains to the southwest and to the west.</p>
     <div id="navigationButtonsDivision"></div>
     </body>

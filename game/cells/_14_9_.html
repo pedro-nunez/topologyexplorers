@@ -23,6 +23,48 @@
     Talking to some of your fellow explorers, they have mentioned to us some theorems that they liked.
     Can you guess who mentioned what theorem?&quot</p></br>
     
+    <button data-modal-target="#logicButton" style="max-width: 500px;">Any consistent formal system \(F\) within which a certain amount of elementary arithmetic can be carried out is incomplete; i.e., there are statements of the language of \(F\) which can neither be proved nor disproved in \(F\).</button>
+    <div class="modal" id="logicButton">
+	<div class="modal-header">
+	    <div>No further explanation.</div>
+	    <button data-close-button class="close-button">&times;</button>
+	</div>
+    </div>
+    <div id="overlay"></div></br>
+    <select name="logic" id="logic" style="margin: 10px">
+	<option value="none" selected disabled hidden>
+	Who said it?
+	</option>
+	<option value="severin">Severin Barmeier</option>
+	<option value="lukas">Lukas Braun</option>
+	<option value="oliver">Oliver Bräunling</option>
+	<option value="johan">Johannes Commelin</option>
+	<option value="andreas">Andreas Demleitner</option>
+	<option value="ksenia">Ksenia Fedosova</option>
+	<option value="vera">Vera Gahlen</option>
+	<option value="vincent">Vincent Gajda</option>
+	<option value="sebastian">Sebastian Goette</option>
+	<option value="tanuj">Tanuj Gomez</option>
+	<option value="nadine">Nadine Große</option>
+	<option value="andriy">Andriy Haydys</option>
+	<option value="fritz">Fritz Hörmann</option>
+	<option value="annette">Annette Huber-Klawitter</option>
+	<option value="stefan">Stefan Kebekus</option>
+	<option value="fabian">Fabian Kertels</option>
+	<option value="jonasL">Jonas Lenthe</option>
+	<option value="jin">Jin Li</option>
+	<option value="nicola">Nicola Nesa</option>
+	<option value="pedro">Pedro Núñez</option>
+	<option value="leonardo">Leonardo Patimo</option>
+	<option value="jonasS">Jonas Schnitzer</option>
+	<option value="wolfgang">Wolfgang Soergel</option>
+	<option value="luca">Luca Terenzi</option>
+	<option value="mara">Mara Ungureanu</option>
+	<option value="katrin">Katrin Wendland</option>
+	<option value="ivan">Giovanni Zaccanelli</option>
+	<option value="nobody">Nobody</option>
+    </select></br></br>
+    
     <button data-modal-target="#appellHumbertButton">Theorem of Appell-Humbert.</button>
     <div class="modal" id="appellHumbertButton">
 	<div class="modal-header">
@@ -650,6 +692,9 @@
 	<script>
 	    function checkTheorems() {
 			var correctAnswers = 0;
+			if (document.getElementById("logic").value == "vera") {
+		    	correctAnswers +=1;
+			}
 			if (document.getElementById("appellHumbert").value == "andreas") {
 		    	correctAnswers +=1;
 			}
@@ -689,7 +734,7 @@
 			if (document.getElementById("tannaka").value == "nicola") {
 		    	correctAnswers +=1;
 			}
-			if (correctAnswers == 13) {
+			if (correctAnswers == 14) {
 		    	alert("Congratulations! You have gained the trust of the locals. You may go west now.")
 		    	document.getElementById("goWest").style.display = "inline";
 			} else {
