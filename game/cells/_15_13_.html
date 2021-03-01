@@ -14,8 +14,846 @@
 
     <body style="text-align: center;">
     <div id="metaButtonsDivision"></div>
+    <h3>A gate blocks your way south.</h3>
+    <p>The guardians of the gate approach you:</br>
+    &quot;Behind this gate lies a sacred valley.
+    In order to let you in, you will have to prove that you are trustworthy as a group.
+    Talking to some of your fellow explorers, they have mentioned to us some theorems that they liked.
+    Can you guess who mentioned what theorem?&quot;</p></br>
+    
+    <button data-modal-target="#logicButton" style="max-width: 500px;">Any consistent formal system \(F\) within which a certain amount of elementary arithmetic can be carried out is incomplete; i.e., there are statements of the language of \(F\) which can neither be proved nor disproved in \(F\).</button>
+    <div class="modal" id="logicButton">
+	<div class="modal-header">
+	    <div>No further explanation.</div>
+	    <button data-close-button class="close-button">&times;</button>
+	</div>
+    </div>
+    <div id="overlay"></div></br>
+    <select name="logic" id="logic" style="margin: 10px">
+	<option value="none" selected disabled hidden>
+	Who said it?
+	</option>
+	<option value="severin">Severin Barmeier</option>
+	<option value="lukas">Lukas Braun</option>
+	<option value="oliver">Oliver Bräunling</option>
+	<option value="johan">Johannes Commelin</option>
+	<option value="andreas">Andreas Demleitner</option>
+	<option value="ksenia">Ksenia Fedosova</option>
+	<option value="vera">Vera Gahlen</option>
+	<option value="vincent">Vincent Gajda</option>
+	<option value="sebastian">Sebastian Goette</option>
+	<option value="tanuj">Tanuj Gomez</option>
+	<option value="nadine">Nadine Große</option>
+	<option value="andriy">Andriy Haydys</option>
+	<option value="fritz">Fritz Hörmann</option>
+	<option value="annette">Annette Huber-Klawitter</option>
+	<option value="stefan">Stefan Kebekus</option>
+	<option value="fabian">Fabian Kertels</option>
+	<option value="jonasL">Jonas Lenthe</option>
+	<option value="jin">Jin Li</option>
+	<option value="nicola">Nicola Nesa</option>
+	<option value="pedro">Pedro Núñez</option>
+	<option value="leonardo">Leonardo Patimo</option>
+	<option value="jonasS">Jonas Schnitzer</option>
+	<option value="wolfgang">Wolfgang Soergel</option>
+	<option value="luca">Luca Terenzi</option>
+	<option value="mara">Mara Ungureanu</option>
+	<option value="katrin">Katrin Wendland</option>
+	<option value="ivan">Giovanni Zaccanelli</option>
+	<option value="nobody">Nobody</option>
+    </select></br></br>
+    
+    <button data-modal-target="#appellHumbertButton">Theorem of Appell-Humbert.</button>
+    <div class="modal" id="appellHumbertButton">
+	<div class="modal-header">
+	    <div>Statement and explanation:</div>
+	    <button data-close-button class="close-button">&times;</button>
+	</div>
+	<div class="modal-body">
+	    <p>Let \(X\) be a complex manifold, \(Pic(X)\) its group of holomorphic line bundles. By definition, the <em>Néron-Severi group</em> is the image of \(c_{1} : Pic(X) \to H^{2}(X,\mathbb{Z})\). Therefore, the exponential sequence gives rise to a short exact sequence
+	    \[ 0 \to Pic^{0}(X) \to Pic(X) \to NS(X) \to 0, \]
+	    where \(Pic^{0}(X)\) is the subgroup of line bundles with vanishing first Chern class.</br></br>
+	    
+	    <strong>Theorem of Appell-Humbert.</strong></br>
+	    Let \(X = \mathbb{C}^{g} /\Lambda\) be a complex torus. Let
+	    <ul>
+	    <li>\(Herm(X)\) be the group of Hermitian forms \(H : \mathbb{C}^{g} \times \mathbb{C}^{g} \to \mathbb{C}\) such that \(E(\Lambda \times \Lambda) \subset \mathbb{Z}\), where \(E\) is the imaginary part of \(H\) (which is an alternating form);</li>
+	    <li>\(AH(X)\) be the group of pairs \((H, \rho)\), where \(H \in Herm(X)\) and \(\rho : \Lambda \to S^{1}\) is a <em>semicharacter</em> for \(H\), that is a character up to a sign, in the following sense:
+	    \[ \forall \lambda_{1}, \lambda_{2} \in \Lambda : \rho(\lambda_{1} + \lambda_{2} ) = \rho(\lambda_{1})\rho(\lambda_{2}) \cdot exp(\pi i \cdot E(\lambda_{1} , \lambda_{2} )). \]
+	    Here, the group law on \(AH(X)\) is defined to be
+	    \[ (H_{1} , \rho_{1} )(H_{2} , \rho_{2}) := (H_{1} + H_{2}, \rho_{1} \rho_{2} ). \]
+	    Then there is a canonical isomorphism
+	    \[ Herm(X) \to NS(X) \]
+	    and a canonical map
+	    \[ AH(X) \to Pic(X), \]
+	    such that its restriction to \(Hom(\Lambda, S^{1} )\subset AH(X)\) induces an isomorphism \(Hom(\Lambda, S^{1}) \to Pic^{0}(X)\).
+	    Moreover, the resulting diagram commutes:
+	    \[ \begin{array}{ccccccccc}
+	    0 & \to & Hom(\Lambda, S^{1}) & \to & AH(X) & \to & Herm(X) & \to & 0 \\
+	    & & \downarrow & & \downarrow & & \downarrow & & \\
+	    0 & \to & Pic^{0}(X) & \to & Pic(X) & \to & NS(X) & \to & 0
+	    \end{array}\]
+	    In particular, the map \(AH(X)\to Pic(X)\) is an isomorphism, too.</br></br>
+	    <strong>Comments.</strong> As we learned in the Wednesday seminar on intermediate Jacobians, there is a canonical isomorphism
+	    \[ H^{2}(X,\mathbb{Z})\cong \bigwedge^{2}Hom(\Lambda,\mathbb{Z}). \]
+	    Thus we may identify \(NS(X)\) with a subgroup of \(Hom(\Lambda, \mathbb{Z})\). Tensoring this subgroup with \(\mathbb{R}\), we obtain an alternating form \(\mathbb{C}^{g} \times \mathbb{C}^{g} \to \mathbb{R}\), which maps \(\Lambda\times \Lambda\) to \(\mathbb{Z}\). This alternating form is the imaginary part of a Hermitian form \(\mathbb{C}^{g} \times \mathbb{C}^{g} \to \mathbb{C}\), which explains \(Herm(X) \cong NS(X)\).</br></br>
+	    The map \(AH(X) \to Pic(X)\) is given by
+	    \[ (H,\rho)\mapsto (\mathbb{C}^{g}\times \mathbb{C})/\Lambda, \]
+	    where \(\Lambda\) acts on \(\mathbb{C}^{g}\times \mathbb{C}\) by \(\lambda(z,t) := \left( z+\lambda, \rho(\lambda)\cdot exp\left(\pi H(z,\lambda)+\frac{\pi}{2}H(\lambda,\Lambda)\right)\cdot t\right)\).
+</p>
+	</div>
+    </div>
+    <div id="overlay"></div></br>
+    <select name="appellHumbert" id="appellHumbert" style="margin: 10px">
+	<option value="none" selected disabled hidden>
+	Who said it?
+	</option>
+	<option value="severin">Severin Barmeier</option>
+	<option value="lukas">Lukas Braun</option>
+	<option value="oliver">Oliver Bräunling</option>
+	<option value="johan">Johannes Commelin</option>
+	<option value="andreas">Andreas Demleitner</option>
+	<option value="ksenia">Ksenia Fedosova</option>
+	<option value="vera">Vera Gahlen</option>
+	<option value="vincent">Vincent Gajda</option>
+	<option value="sebastian">Sebastian Goette</option>
+	<option value="tanuj">Tanuj Gomez</option>
+	<option value="nadine">Nadine Große</option>
+	<option value="andriy">Andriy Haydys</option>
+	<option value="fritz">Fritz Hörmann</option>
+	<option value="annette">Annette Huber-Klawitter</option>
+	<option value="stefan">Stefan Kebekus</option>
+	<option value="fabian">Fabian Kertels</option>
+	<option value="jonasL">Jonas Lenthe</option>
+	<option value="jin">Jin Li</option>
+	<option value="nicola">Nicola Nesa</option>
+	<option value="pedro">Pedro Núñez</option>
+	<option value="leonardo">Leonardo Patimo</option>
+	<option value="jonasS">Jonas Schnitzer</option>
+	<option value="wolfgang">Wolfgang Soergel</option>
+	<option value="luca">Luca Terenzi</option>
+	<option value="mara">Mara Ungureanu</option>
+	<option value="katrin">Katrin Wendland</option>
+	<option value="ivan">Giovanni Zaccanelli</option>
+	<option value="nobody">Nobody</option>
+    </select></br></br>
+    
+    <button data-modal-target="#atiyahSingerButton">The Atiyah-Singer index theorem.</button>
+    <div class="modal" id="atiyahSingerButton">
+	<div class="modal-header">
+	    <div>Statement and explanation:</div>
+	    <button data-close-button class="close-button">&times;</button>
+	</div>
+	<div class="modal-body">
+	    <p>This theorem relates functional analysis with algebraic topology and sometimes even with geometry. It says that the Fredholm index of an elliptic differential operator \(D\) on a compact manifold \(M\) equals the K-theoretic pushdown of its principal symbol from \(T^{*}M\) to a point. If \(D\) happens to be geometric (like the Hodge-de Rham operator on a Riemannian manifold or the Dolbeault operator on a Kähler manifold), then there is also a geometric expression for the index as an integral of a curvature quantity over \(M\).</p>
+	</div>
+    </div>
+    <div id="overlay"></div></br>
+    <select name="atiyahSinger" id="atiyahSinger" style="margin: 10px">
+	<option value="none" selected disabled hidden>
+	Who said it?
+	</option>
+	<option value="severin">Severin Barmeier</option>
+	<option value="lukas">Lukas Braun</option>
+	<option value="oliver">Oliver Bräunling</option>
+	<option value="johan">Johannes Commelin</option>
+	<option value="andreas">Andreas Demleitner</option>
+	<option value="ksenia">Ksenia Fedosova</option>
+	<option value="vera">Vera Gahlen</option>
+	<option value="vincent">Vincent Gajda</option>
+	<option value="sebastian">Sebastian Goette</option>
+	<option value="tanuj">Tanuj Gomez</option>
+	<option value="nadine">Nadine Große</option>
+	<option value="andriy">Andriy Haydys</option>
+	<option value="fritz">Fritz Hörmann</option>
+	<option value="annette">Annette Huber-Klawitter</option>
+	<option value="stefan">Stefan Kebekus</option>
+	<option value="fabian">Fabian Kertels</option>
+	<option value="jonasL">Jonas Lenthe</option>
+	<option value="jin">Jin Li</option>
+	<option value="nicola">Nicola Nesa</option>
+	<option value="pedro">Pedro Núñez</option>
+	<option value="leonardo">Leonardo Patimo</option>
+	<option value="jonasS">Jonas Schnitzer</option>
+	<option value="wolfgang">Wolfgang Soergel</option>
+	<option value="luca">Luca Terenzi</option>
+	<option value="mara">Mara Ungureanu</option>
+	<option value="katrin">Katrin Wendland</option>
+	<option value="ivan">Giovanni Zaccanelli</option>
+	<option value="nobody">Nobody</option>
+    </select></br></br>
+    
+    <button data-modal-target="#belyiButton">Belyi's Theorem.</button>
+    <div class="modal" id="belyiButton">
+	<div class="modal-header">
+	    <div>Statement and explanation:</div>
+	    <button data-close-button class="close-button">&times;</button>
+	</div>
+	<div class="modal-body">
+	    <p>Let \(X\) be an integral smooth proper curve over the complex numbers. Then \(X\) arises as a base change from a curve defined over a number field if and only if there exists a morphism
+	    \[ X \dashrightarrow \mathbb{P}^{1} \]
+	    ramified in at most three points (which wlog can be taken to be \(0\),\(1\),\(\infty\))</br></br>
+	    <a href="https://arxiv.org/pdf/math/0108222.pdf">https://arxiv.org/pdf/math/0108222.pdf</a></br></br>
+	    As a result of it, one can show (using various other theorems) that there is an injective group hom
+	    \[ Gal(\overline{\mathbb{Q}} / \mathbb{Q}) \dashrightarrow \text{Outer automorphism group of the free profinite group on 2 generators} \]
+	    and refining what the image is leads to the profinite Grothendieck-Teichmüller group, which some people conjecture to be isomorphic to \(Gal(\overline{\mathbb{Q}}/\mathbb{Q})\)</p>
+	</div>
+    </div>
+    <div id="overlay"></div></br>
+    <select name="belyi" id="belyi" style="margin: 10px">
+	<option value="none" selected disabled hidden>
+	Who said it?
+	</option>
+	<option value="severin">Severin Barmeier</option>
+	<option value="lukas">Lukas Braun</option>
+	<option value="oliver">Oliver Bräunling</option>
+	<option value="johan">Johannes Commelin</option>
+	<option value="andreas">Andreas Demleitner</option>
+	<option value="ksenia">Ksenia Fedosova</option>
+	<option value="vera">Vera Gahlen</option>
+	<option value="vincent">Vincent Gajda</option>
+	<option value="sebastian">Sebastian Goette</option>
+	<option value="tanuj">Tanuj Gomez</option>
+	<option value="nadine">Nadine Große</option>
+	<option value="andriy">Andriy Haydys</option>
+	<option value="fritz">Fritz Hörmann</option>
+	<option value="annette">Annette Huber-Klawitter</option>
+	<option value="stefan">Stefan Kebekus</option>
+	<option value="fabian">Fabian Kertels</option>
+	<option value="jonasL">Jonas Lenthe</option>
+	<option value="jin">Jin Li</option>
+	<option value="nicola">Nicola Nesa</option>
+	<option value="pedro">Pedro Núñez</option>
+	<option value="leonardo">Leonardo Patimo</option>
+	<option value="jonasS">Jonas Schnitzer</option>
+	<option value="wolfgang">Wolfgang Soergel</option>
+	<option value="luca">Luca Terenzi</option>
+	<option value="mara">Mara Ungureanu</option>
+	<option value="katrin">Katrin Wendland</option>
+	<option value="ivan">Giovanni Zaccanelli</option>
+	<option value="nobody">Nobody</option>
+    </select></br></br>
+    
+    <button data-modal-target="#brouwerButton" style="max-width: 500px;">Brouwer's fixed point theorem</button>
+    <div class="modal" id="brouwerButton">
+	<div class="modal-header">
+	    <div>Statement and explanation:</div>
+	    <button data-close-button class="close-button">&times;</button>
+	</div>
+    <div class="modal-body">
+	    <p style="text-align: left;">One of its impersonations states that any continuous map from the \(2\)-disk to itself must have a fixed point.
+	    So for example, suppose the following:
+	    <ol>
+	    <li>You have two sheets of paper on the table and you align them perfectly one on top of the other;</li>
+	    <li>You take the top sheet and crumple it into a ball;</li>
+	    <li>You leave the ball in the middle of the bottom sheet of paper, so that its vertical projection stays within the bottom sheet of paper;</li>
+	    </ol>
+	    Then there is some point in the ball of paper whose vertical projection is exactly the same point as it was originally, when the two sheets were aligned one on top of the other.</p>
+	</div>
+    </div>
+    <div id="overlay"></div></br>
+    <select name="brouwer" id="brouwer" style="margin: 10px">
+	<option value="none" selected disabled hidden>
+	Who said it?
+	</option>
+	<option value="severin">Severin Barmeier</option>
+	<option value="lukas">Lukas Braun</option>
+	<option value="oliver">Oliver Bräunling</option>
+	<option value="johan">Johannes Commelin</option>
+	<option value="andreas">Andreas Demleitner</option>
+	<option value="ksenia">Ksenia Fedosova</option>
+	<option value="vera">Vera Gahlen</option>
+	<option value="vincent">Vincent Gajda</option>
+	<option value="sebastian">Sebastian Goette</option>
+	<option value="tanuj">Tanuj Gomez</option>
+	<option value="nadine">Nadine Große</option>
+	<option value="andriy">Andriy Haydys</option>
+	<option value="fritz">Fritz Hörmann</option>
+	<option value="annette">Annette Huber-Klawitter</option>
+	<option value="stefan">Stefan Kebekus</option>
+	<option value="fabian">Fabian Kertels</option>
+	<option value="jonasL">Jonas Lenthe</option>
+	<option value="jin">Jin Li</option>
+	<option value="nicola">Nicola Nesa</option>
+	<option value="pedro">Pedro Núñez</option>
+	<option value="leonardo">Leonardo Patimo</option>
+	<option value="jonasS">Jonas Schnitzer</option>
+	<option value="wolfgang">Wolfgang Soergel</option>
+	<option value="luca">Luca Terenzi</option>
+	<option value="mara">Mara Ungureanu</option>
+	<option value="katrin">Katrin Wendland</option>
+	<option value="ivan">Giovanni Zaccanelli</option>
+	<option value="nobody">Nobody</option>
+    </select></br></br>
+    
+    <button data-modal-target="#dirichletButton">Dirichlet's density theorem.</button>
+    <div class="modal" id="dirichletButton">
+	<div class="modal-header">
+	    <div>Statement:</div>
+	    <button data-close-button class="close-button">&times;</button>
+	</div>
+	<div class="modal-body">
+	    <p>Every arithmetic progression \(a, a+q, a+2q, a+3q,\dots\) with coprime \(a\),\(q\) contains infinitely many primes.</p>
+	</div>
+    </div>
+    <div id="overlay"></div></br>
+    <select name="dirichlet" id="dirichlet" style="margin: 10px">
+	<option value="none" selected disabled hidden>
+	Who said it?
+	</option>
+	<option value="severin">Severin Barmeier</option>
+	<option value="lukas">Lukas Braun</option>
+	<option value="oliver">Oliver Bräunling</option>
+	<option value="johan">Johannes Commelin</option>
+	<option value="andreas">Andreas Demleitner</option>
+	<option value="ksenia">Ksenia Fedosova</option>
+	<option value="vera">Vera Gahlen</option>
+	<option value="vincent">Vincent Gajda</option>
+	<option value="sebastian">Sebastian Goette</option>
+	<option value="tanuj">Tanuj Gomez</option>
+	<option value="nadine">Nadine Große</option>
+	<option value="andriy">Andriy Haydys</option>
+	<option value="fritz">Fritz Hörmann</option>
+	<option value="annette">Annette Huber-Klawitter</option>
+	<option value="stefan">Stefan Kebekus</option>
+	<option value="fabian">Fabian Kertels</option>
+	<option value="jonasL">Jonas Lenthe</option>
+	<option value="jin">Jin Li</option>
+	<option value="nicola">Nicola Nesa</option>
+	<option value="pedro">Pedro Núñez</option>
+	<option value="leonardo">Leonardo Patimo</option>
+	<option value="jonasS">Jonas Schnitzer</option>
+	<option value="wolfgang">Wolfgang Soergel</option>
+	<option value="luca">Luca Terenzi</option>
+	<option value="mara">Mara Ungureanu</option>
+	<option value="katrin">Katrin Wendland</option>
+	<option value="ivan">Giovanni Zaccanelli</option>
+	<option value="nobody">Nobody</option>
+    </select></br></br>
+    
+    <button data-modal-target="#glnButton" style="max-width: 500px;">Every compact subgroup of \(GL(n;\mathbb{R})\) is the zero set of a finite number of polynomial equations.</button>
+    <div class="modal" id="glnButton">
+	<div class="modal-header">
+	    <div>No further explanation.</div>
+	    <button data-close-button class="close-button">&times;</button>
+	</div>
+    </div>
+    <div id="overlay"></div></br>
+    <select name="gln" id="gln" style="margin: 10px">
+	<option value="none" selected disabled hidden>
+	Who said it?
+	</option>
+	<option value="severin">Severin Barmeier</option>
+	<option value="lukas">Lukas Braun</option>
+	<option value="oliver">Oliver Bräunling</option>
+	<option value="johan">Johannes Commelin</option>
+	<option value="andreas">Andreas Demleitner</option>
+	<option value="ksenia">Ksenia Fedosova</option>
+	<option value="vera">Vera Gahlen</option>
+	<option value="vincent">Vincent Gajda</option>
+	<option value="sebastian">Sebastian Goette</option>
+	<option value="tanuj">Tanuj Gomez</option>
+	<option value="nadine">Nadine Große</option>
+	<option value="andriy">Andriy Haydys</option>
+	<option value="fritz">Fritz Hörmann</option>
+	<option value="annette">Annette Huber-Klawitter</option>
+	<option value="stefan">Stefan Kebekus</option>
+	<option value="fabian">Fabian Kertels</option>
+	<option value="jonasL">Jonas Lenthe</option>
+	<option value="jin">Jin Li</option>
+	<option value="nicola">Nicola Nesa</option>
+	<option value="pedro">Pedro Núñez</option>
+	<option value="leonardo">Leonardo Patimo</option>
+	<option value="jonasS">Jonas Schnitzer</option>
+	<option value="wolfgang">Wolfgang Soergel</option>
+	<option value="luca">Luca Terenzi</option>
+	<option value="mara">Mara Ungureanu</option>
+	<option value="katrin">Katrin Wendland</option>
+	<option value="ivan">Giovanni Zaccanelli</option>
+	<option value="nobody">Nobody</option>
+    </select></br></br>
+    
+    <button data-modal-target="#gabrielButton">Gabriel's theorem.</button>
+    <div class="modal" id="gabrielButton">
+	<div class="modal-header">
+	    <div>Statement and explanation:</div>
+	    <button data-close-button class="close-button">&times;</button>
+	</div>
+	<div class="modal-body">
+	    <p>Statement: A connected quiver has finitely many indecomposable representations if and only if its underlying unoriented graph is one of the ADE Dynking diagrams.</br></br>
+	    Explanation: &quot;If we needed to make contact with an alien civilization and show them how sophisticated our civilization is, perhaps showing them Dynkin diagrams would be the best choice.&quot; (P. Etingof) In fact, they arise in a multitude of classification problems in mathematics, such as the classification of simple Lie algebras, singularities, platonic solids, reflection groups…and quivers with finitely many indecomposable representations.</p>
+	</div>
+    </div>
+    <div id="overlay"></div></br>
+    <select name="gabriel" id="gabriel" style="margin: 10px">
+	<option value="none" selected disabled hidden>
+	Who said it?
+	</option>
+	<option value="severin">Severin Barmeier</option>
+	<option value="lukas">Lukas Braun</option>
+	<option value="oliver">Oliver Bräunling</option>
+	<option value="johan">Johannes Commelin</option>
+	<option value="andreas">Andreas Demleitner</option>
+	<option value="ksenia">Ksenia Fedosova</option>
+	<option value="vera">Vera Gahlen</option>
+	<option value="vincent">Vincent Gajda</option>
+	<option value="sebastian">Sebastian Goette</option>
+	<option value="tanuj">Tanuj Gomez</option>
+	<option value="nadine">Nadine Große</option>
+	<option value="andriy">Andriy Haydys</option>
+	<option value="fritz">Fritz Hörmann</option>
+	<option value="annette">Annette Huber-Klawitter</option>
+	<option value="stefan">Stefan Kebekus</option>
+	<option value="fabian">Fabian Kertels</option>
+	<option value="jonasL">Jonas Lenthe</option>
+	<option value="jin">Jin Li</option>
+	<option value="nicola">Nicola Nesa</option>
+	<option value="pedro">Pedro Núñez</option>
+	<option value="leonardo">Leonardo Patimo</option>
+	<option value="jonasS">Jonas Schnitzer</option>
+	<option value="wolfgang">Wolfgang Soergel</option>
+	<option value="luca">Luca Terenzi</option>
+	<option value="mara">Mara Ungureanu</option>
+	<option value="katrin">Katrin Wendland</option>
+	<option value="ivan">Giovanni Zaccanelli</option>
+	<option value="nobody">Nobody</option>
+    </select></br></br>
+    
+    <button data-modal-target="#gaussBonnetButton">Gauß-Bonnet theorem.</button>
+    <div class="modal" id="gaussBonnetButton">
+	<div class="modal-header">
+	    <div>Statement and explanation:</div>
+	    <button data-close-button class="close-button">&times;</button>
+	</div>
+	<div class="modal-body">
+	    <p>It says that the integral over the Gaussian curvature of a closed Riemannian surface is given by \(2\pi\) times the Euler characteristic. Which is absolutely crazy, since the definitions of these two values do not seem connected at all. It's the very first special case of the Atiyah-Singer index theorem I have seen in my life and also my first glance at characteristic classes themselves (in this case Chern classes, I guess).</p>
+	</div>
+    </div>
+    <div id="overlay"></div></br>
+    <select name="gaussBonnet" id="gaussBonnet" style="margin: 10px">
+	<option value="none" selected disabled hidden>
+	Who said it?
+	</option>
+	<option value="severin">Severin Barmeier</option>
+	<option value="lukas">Lukas Braun</option>
+	<option value="oliver">Oliver Bräunling</option>
+	<option value="johan">Johannes Commelin</option>
+	<option value="andreas">Andreas Demleitner</option>
+	<option value="ksenia">Ksenia Fedosova</option>
+	<option value="vera">Vera Gahlen</option>
+	<option value="vincent">Vincent Gajda</option>
+	<option value="sebastian">Sebastian Goette</option>
+	<option value="tanuj">Tanuj Gomez</option>
+	<option value="nadine">Nadine Große</option>
+	<option value="andriy">Andriy Haydys</option>
+	<option value="fritz">Fritz Hörmann</option>
+	<option value="annette">Annette Huber-Klawitter</option>
+	<option value="stefan">Stefan Kebekus</option>
+	<option value="fabian">Fabian Kertels</option>
+	<option value="jonasL">Jonas Lenthe</option>
+	<option value="jin">Jin Li</option>
+	<option value="nicola">Nicola Nesa</option>
+	<option value="pedro">Pedro Núñez</option>
+	<option value="leonardo">Leonardo Patimo</option>
+	<option value="jonasS">Jonas Schnitzer</option>
+	<option value="wolfgang">Wolfgang Soergel</option>
+	<option value="luca">Luca Terenzi</option>
+	<option value="mara">Mara Ungureanu</option>
+	<option value="katrin">Katrin Wendland</option>
+	<option value="ivan">Giovanni Zaccanelli</option>
+	<option value="nobody">Nobody</option>
+    </select></br></br>
+    
+    <button data-modal-target="#gerstenhaberButton" style="max-width: 500px;">The Gerstenhaber algebra of multiderivations of a polynomial Algebra is intrinisically formal.</button>
+    <div class="modal" id="gerstenhaberButton">
+	<div class="modal-header">
+	    <div>An explanation:</div>
+	    <button data-close-button class="close-button">&times;</button>
+	</div>
+	<div class="modal-body">
+	    <p>A Gerstenhaber algebra is a graded commutative algebra with a degree \(-1\) Lie bracket, which is a graded biderivation with respect to the graded commutative product. The theorem states now that every \(G_{\infty}\)-algebra (Gerstenhaber algebra &quot;up to homotopy&quot;) whose cohomology is isomorphic to the multiderivations of a polynomial algebra is \(G_{\infty}\)-quasi-isomorphic to its cohomology (not only as complexes). Using this theorem one can re-prove the Kontsevich formality by completely different tactics: instead of finding a an \(L_{\infty}\)-quasi-isomorphism from the multivectorfields to the polydifferential operators, one can &quot;simply&quot; find a \(G_{\infty}\) structure on the polydifferential operators and the theorem follows as a corollary.</p>
+	</div>
+    </div>
+    <div id="overlay"></div></br>
+    <select name="gerstenhaber" id="gerstenhaber" style="margin: 10px">
+	<option value="none" selected disabled hidden>
+	Who said it?
+	</option>
+	<option value="severin">Severin Barmeier</option>
+	<option value="lukas">Lukas Braun</option>
+	<option value="oliver">Oliver Bräunling</option>
+	<option value="johan">Johannes Commelin</option>
+	<option value="andreas">Andreas Demleitner</option>
+	<option value="ksenia">Ksenia Fedosova</option>
+	<option value="vera">Vera Gahlen</option>
+	<option value="vincent">Vincent Gajda</option>
+	<option value="sebastian">Sebastian Goette</option>
+	<option value="tanuj">Tanuj Gomez</option>
+	<option value="nadine">Nadine Große</option>
+	<option value="andriy">Andriy Haydys</option>
+	<option value="fritz">Fritz Hörmann</option>
+	<option value="annette">Annette Huber-Klawitter</option>
+	<option value="stefan">Stefan Kebekus</option>
+	<option value="fabian">Fabian Kertels</option>
+	<option value="jonasL">Jonas Lenthe</option>
+	<option value="jin">Jin Li</option>
+	<option value="nicola">Nicola Nesa</option>
+	<option value="pedro">Pedro Núñez</option>
+	<option value="leonardo">Leonardo Patimo</option>
+	<option value="jonasS">Jonas Schnitzer</option>
+	<option value="wolfgang">Wolfgang Soergel</option>
+	<option value="luca">Luca Terenzi</option>
+	<option value="mara">Mara Ungureanu</option>
+	<option value="katrin">Katrin Wendland</option>
+	<option value="ivan">Giovanni Zaccanelli</option>
+	<option value="nobody">Nobody</option>
+    </select></br></br>
+    
+    <button data-modal-target="#hironakaButton" style="max-width: 500px;">Given a singular variety \(X\) over \(\mathbb{C}\) (or a complex-analytic space), Hironaka provides us with a desingularization, that is, a morphism of spaces \(\pi \colon \tilde{X} \to X\) where \(\tilde{X}\) is smooth and \(\pi\) is a isomorphism wherever is smooth.</button>
+    <div class="modal" id="hironakaButton">
+	<div class="modal-header">
+	    <div>An explanation:</div>
+	    <button data-close-button class="close-button">&times;</button>
+	</div>
+	<div class="modal-body">
+	    <p>Hironaka's result is not abstract; he provides us with an <strong>algorithm</strong> that takes \(X\) and constructs \(\pi\). Recall that algorithms cannot make any choices. The word "algorithm" therefore implies that Hironaka's desingularization respects all symmetries of the underlying space, no matter if the automorphism groups are finite, infinite or even infinite-dimensional!</p>
+	</div>
+    </div>
+    <div id="overlay"></div></br>
+    <select name="hironaka" id="hironaka" style="margin: 10px">
+	<option value="none" selected disabled hidden>
+	Who said it?
+	</option>
+	<option value="severin">Severin Barmeier</option>
+	<option value="lukas">Lukas Braun</option>
+	<option value="oliver">Oliver Bräunling</option>
+	<option value="johan">Johannes Commelin</option>
+	<option value="andreas">Andreas Demleitner</option>
+	<option value="ksenia">Ksenia Fedosova</option>
+	<option value="vera">Vera Gahlen</option>
+	<option value="vincent">Vincent Gajda</option>
+	<option value="sebastian">Sebastian Goette</option>
+	<option value="tanuj">Tanuj Gomez</option>
+	<option value="nadine">Nadine Große</option>
+	<option value="andriy">Andriy Haydys</option>
+	<option value="fritz">Fritz Hörmann</option>
+	<option value="annette">Annette Huber-Klawitter</option>
+	<option value="stefan">Stefan Kebekus</option>
+	<option value="fabian">Fabian Kertels</option>
+	<option value="jonasL">Jonas Lenthe</option>
+	<option value="jin">Jin Li</option>
+	<option value="nicola">Nicola Nesa</option>
+	<option value="pedro">Pedro Núñez</option>
+	<option value="leonardo">Leonardo Patimo</option>
+	<option value="jonasS">Jonas Schnitzer</option>
+	<option value="wolfgang">Wolfgang Soergel</option>
+	<option value="luca">Luca Terenzi</option>
+	<option value="mara">Mara Ungureanu</option>
+	<option value="katrin">Katrin Wendland</option>
+	<option value="ivan">Giovanni Zaccanelli</option>
+	<option value="nobody">Nobody</option>
+    </select></br></br>
+    
+    <button data-modal-target="#kroneckerWeberButton">Kronecker-Weber theorem.</button>
+    <div class="modal" id="kroneckerWeberButton">
+	<div class="modal-header">
+	    <div>Statement and explanation:</div>
+	    <button data-close-button class="close-button">&times;</button>
+	</div>
+	<div class="modal-body">
+	    <p>Every abelian extension of the rational numbers is contained in a cyclotomic field.</br></br>
+	    Explanation:</br>
+	    An abelian extension of the rational numbers is a finite Galois extension \(F\) of \(\mathbb{Q}\) such that the group \(Gal(F/\mathbb{Q})\) is abelian. A cyclotomic field is a field \(E_{n}\) of the form \(\mathbb{Q}(\zeta_{n})\) where \(\zeta_{n}\) is a primitive \(n\)-th root of \(1\); such a field is an abelian extension of \(\mathbb{Q}\) with Galois group isomorphic to the multiplicative group \((\mathbb{Z}/n\mathbb{Z})^{\times}\). So the theorem asserts that for every abelian extension \(F\) of \(\mathbb{Q}\) there exists an integer \(n\) such that \(F\subset E_{n}\).</p>
+	</div>
+    </div>
+    <div id="overlay"></div></br>
+    <select name="kroneckerWeber" id="kroneckerWeber" style="margin: 10px">
+	<option value="none" selected disabled hidden>
+	Who said it?
+	</option>
+	<option value="severin">Severin Barmeier</option>
+	<option value="lukas">Lukas Braun</option>
+	<option value="oliver">Oliver Bräunling</option>
+	<option value="johan">Johannes Commelin</option>
+	<option value="andreas">Andreas Demleitner</option>
+	<option value="ksenia">Ksenia Fedosova</option>
+	<option value="vera">Vera Gahlen</option>
+	<option value="vincent">Vincent Gajda</option>
+	<option value="sebastian">Sebastian Goette</option>
+	<option value="tanuj">Tanuj Gomez</option>
+	<option value="nadine">Nadine Große</option>
+	<option value="andriy">Andriy Haydys</option>
+	<option value="fritz">Fritz Hörmann</option>
+	<option value="annette">Annette Huber-Klawitter</option>
+	<option value="stefan">Stefan Kebekus</option>
+	<option value="fabian">Fabian Kertels</option>
+	<option value="jonasL">Jonas Lenthe</option>
+	<option value="jin">Jin Li</option>
+	<option value="nicola">Nicola Nesa</option>
+	<option value="pedro">Pedro Núñez</option>
+	<option value="leonardo">Leonardo Patimo</option>
+	<option value="jonasS">Jonas Schnitzer</option>
+	<option value="wolfgang">Wolfgang Soergel</option>
+	<option value="luca">Luca Terenzi</option>
+	<option value="mara">Mara Ungureanu</option>
+	<option value="katrin">Katrin Wendland</option>
+	<option value="ivan">Giovanni Zaccanelli</option>
+	<option value="nobody">Nobody</option>
+    </select></br></br>
+    
+    <button data-modal-target="#tannakaButton">Main theorem of Tannaka theory.</button>
+    <div class="modal" id="tannakaButton">
+	<div class="modal-header">
+	    <div>Statement and explanation:</div>
+	    <button data-close-button class="close-button">&times;</button>
+	</div>
+	<div class="modal-body">
+	    <p>&quotEvery neutral Tannakian category is equivalent to the category of finite dimensional representations of an affine group scheme.&quot</br></br>
+	    In other words, every category that has a notion of tensor product and duality modelled on the properties of the category of finite dimensional representations of an affine group scheme (or just vector spaces) is in fact such a category. Not only that, but there is an actual description of the affine group scheme. The upshot is that one can study any such category (and there are more interesting ones than one might suspect at first sight) using tools from representation theory, algebraic group theory, and the theory of commutative Hopf algebras. In a sense, this theorem is similar to the Freyd-Mitchell embedding theorem, stating that one can think of abelian categories as if the objects were modules over some ring. Here the scope is narrower (less categories), but the analogy is more explicit and powerful.</p>
+	</div>
+    </div>
+    <div id="overlay"></div></br>
+    <select name="tannaka" id="tannaka" style="margin: 10px">
+	<option value="none" selected disabled hidden>
+	Who said it?
+	</option>
+	<option value="severin">Severin Barmeier</option>
+	<option value="lukas">Lukas Braun</option>
+	<option value="oliver">Oliver Bräunling</option>
+	<option value="johan">Johannes Commelin</option>
+	<option value="andreas">Andreas Demleitner</option>
+	<option value="ksenia">Ksenia Fedosova</option>
+	<option value="vera">Vera Gahlen</option>
+	<option value="vincent">Vincent Gajda</option>
+	<option value="sebastian">Sebastian Goette</option>
+	<option value="tanuj">Tanuj Gomez</option>
+	<option value="nadine">Nadine Große</option>
+	<option value="andriy">Andriy Haydys</option>
+	<option value="fritz">Fritz Hörmann</option>
+	<option value="annette">Annette Huber-Klawitter</option>
+	<option value="stefan">Stefan Kebekus</option>
+	<option value="fabian">Fabian Kertels</option>
+	<option value="jonasL">Jonas Lenthe</option>
+	<option value="jin">Jin Li</option>
+	<option value="nicola">Nicola Nesa</option>
+	<option value="pedro">Pedro Núñez</option>
+	<option value="leonardo">Leonardo Patimo</option>
+	<option value="jonasS">Jonas Schnitzer</option>
+	<option value="wolfgang">Wolfgang Soergel</option>
+	<option value="luca">Luca Terenzi</option>
+	<option value="mara">Mara Ungureanu</option>
+	<option value="katrin">Katrin Wendland</option>
+	<option value="ivan">Giovanni Zaccanelli</option>
+	<option value="nobody">Nobody</option>
+    </select></br></br>
+    
+    <button data-modal-target="#modularFormsButton" style="max-width: 500px">Let \(\mathcal{M} = \bigoplus_{k\in\mathbb{Z}}\mathcal{M}_{k}\) be the space of modular forms for \(\mathrm{SL}(2,\mathbb{Z})\), graded by weight \(k\). For even \(k > 2\), let \(E_k\) be the Eisenstein series of weight \(k\) for \(\mathrm{SL}(2,\mathbb{Z})\). Then \(\mathcal{M} = \mathbb{C}[E_4, E_6]\), that is, for all \(k \in \mathbb{Z}\), the space \(\mathcal{M}_k\) has a basis consisting of those monomials \(E_4^a E_6^b\) for which \(4a + 6b = k\).</button>
+    <div class="modal" id="modularFormsButton">
+	<div class="modal-header">
+	    <div>An explanation:</div>
+	    <button data-close-button class="close-button">&times;</button>
+	</div>
+	<div class="modal-body">
+	    <p>Modular forms are meromorphic functions on the complex upper half-plane that show a certain transformation behaviour under Möbius transformations and satisfy some growth conditions. A weight \(k\) modular form for \(\mathrm{SL}(2,\mathbb{Z})\) would, under the Möbius transformation corresponding to \(\bigl(\begin{smallmatrix} a&b \\ c&d \end{smallmatrix} \bigr)\), receive a factor \((c z + d)^k\). Eisenstein series are particular modular forms, defined as locally uniformly convergent series \(\sum_{(m, n) \ne (0, 0)} \frac{1}{(m z + n)^k}\), up to normalization. Their Fourier coefficients contain divisor sums and zeta values.</p>
+	</div>
+    </div>
+    <div id="overlay"></div></br>
+    <select name="modularForms" id="modularForms" style="margin: 10px">
+	<option value="none" selected disabled hidden>
+	Who said it?
+	</option>
+	<option value="severin">Severin Barmeier</option>
+	<option value="lukas">Lukas Braun</option>
+	<option value="oliver">Oliver Bräunling</option>
+	<option value="johan">Johannes Commelin</option>
+	<option value="andreas">Andreas Demleitner</option>
+	<option value="ksenia">Ksenia Fedosova</option>
+	<option value="vera">Vera Gahlen</option>
+	<option value="vincent">Vincent Gajda</option>
+	<option value="sebastian">Sebastian Goette</option>
+	<option value="tanuj">Tanuj Gomez</option>
+	<option value="nadine">Nadine Große</option>
+	<option value="andriy">Andriy Haydys</option>
+	<option value="fritz">Fritz Hörmann</option>
+	<option value="annette">Annette Huber-Klawitter</option>
+	<option value="stefan">Stefan Kebekus</option>
+	<option value="fabian">Fabian Kertels</option>
+	<option value="jonasL">Jonas Lenthe</option>
+	<option value="jin">Jin Li</option>
+	<option value="nicola">Nicola Nesa</option>
+	<option value="pedro">Pedro Núñez</option>
+	<option value="leonardo">Leonardo Patimo</option>
+	<option value="jonasS">Jonas Schnitzer</option>
+	<option value="wolfgang">Wolfgang Soergel</option>
+	<option value="luca">Luca Terenzi</option>
+	<option value="mara">Mara Ungureanu</option>
+	<option value="katrin">Katrin Wendland</option>
+	<option value="ivan">Giovanni Zaccanelli</option>
+	<option value="nobody">Nobody</option>
+    </select></br></br>
+    
+    <button data-modal-target="#enumerativeButton" style="max-width: 500px;">The (virtual) number of secant planes to a curve or a surface in projective space depends only on the topology of the curve or the surface.</button>
+    <div class="modal" id="enumerativeButton">
+	<div class="modal-header">
+	    <div>Remark:</div>
+	    <button data-close-button class="close-button">&times;</button>
+	</div>
+	<div class="modal-body">
+	    <p>Proven by Ellingsrud, Göttsche, and Lehn around 2000.</p>
+	</div>
+    </div>
+    <div id="overlay"></div></br>
+    <select name="enumerative" id="enumerative" style="margin: 10px">
+	<option value="none" selected disabled hidden>
+	Who said it?
+	</option>
+	<option value="severin">Severin Barmeier</option>
+	<option value="lukas">Lukas Braun</option>
+	<option value="oliver">Oliver Bräunling</option>
+	<option value="johan">Johannes Commelin</option>
+	<option value="andreas">Andreas Demleitner</option>
+	<option value="ksenia">Ksenia Fedosova</option>
+	<option value="vera">Vera Gahlen</option>
+	<option value="vincent">Vincent Gajda</option>
+	<option value="sebastian">Sebastian Goette</option>
+	<option value="tanuj">Tanuj Gomez</option>
+	<option value="nadine">Nadine Große</option>
+	<option value="andriy">Andriy Haydys</option>
+	<option value="fritz">Fritz Hörmann</option>
+	<option value="annette">Annette Huber-Klawitter</option>
+	<option value="stefan">Stefan Kebekus</option>
+	<option value="fabian">Fabian Kertels</option>
+	<option value="jonasL">Jonas Lenthe</option>
+	<option value="jin">Jin Li</option>
+	<option value="nicola">Nicola Nesa</option>
+	<option value="pedro">Pedro Núñez</option>
+	<option value="leonardo">Leonardo Patimo</option>
+	<option value="jonasS">Jonas Schnitzer</option>
+	<option value="wolfgang">Wolfgang Soergel</option>
+	<option value="luca">Luca Terenzi</option>
+	<option value="mara">Mara Ungureanu</option>
+	<option value="katrin">Katrin Wendland</option>
+	<option value="ivan">Giovanni Zaccanelli</option>
+	<option value="nobody">Nobody</option>
+    </select></br></br>
+    
+    <button data-modal-target="#residueButton">Residue theorem.</button>
+    <div class="modal" id="residueButton">
+	<div class="modal-header">
+	    <div>Statement and explanation:</div>
+	    <button data-close-button class="close-button">&times;</button>
+	</div>
+	<div class="modal-body">
+	    <p>&quot;A contour integral in a simply connected domain of \(\mathbb{C}\) can be computed by counting poles and their residues constrained within the contour curve.&quot;</br></br>
+	    Who wouldn't want to draw keyholes to solve integrals?</p>
+	</div>
+    </div>
+    <div id="overlay"></div></br>
+    <select name="residue" id="residue" style="margin: 10px">
+	<option value="none" selected disabled hidden>
+	Who said it?
+	</option>
+	<option value="severin">Severin Barmeier</option>
+	<option value="lukas">Lukas Braun</option>
+	<option value="oliver">Oliver Bräunling</option>
+	<option value="johan">Johannes Commelin</option>
+	<option value="andreas">Andreas Demleitner</option>
+	<option value="ksenia">Ksenia Fedosova</option>
+	<option value="vera">Vera Gahlen</option>
+	<option value="vincent">Vincent Gajda</option>
+	<option value="sebastian">Sebastian Goette</option>
+	<option value="tanuj">Tanuj Gomez</option>
+	<option value="nadine">Nadine Große</option>
+	<option value="andriy">Andriy Haydys</option>
+	<option value="fritz">Fritz Hörmann</option>
+	<option value="annette">Annette Huber-Klawitter</option>
+	<option value="stefan">Stefan Kebekus</option>
+	<option value="fabian">Fabian Kertels</option>
+	<option value="jonasL">Jonas Lenthe</option>
+	<option value="jin">Jin Li</option>
+	<option value="nicola">Nicola Nesa</option>
+	<option value="pedro">Pedro Núñez</option>
+	<option value="leonardo">Leonardo Patimo</option>
+	<option value="jonasS">Jonas Schnitzer</option>
+	<option value="wolfgang">Wolfgang Soergel</option>
+	<option value="luca">Luca Terenzi</option>
+	<option value="mara">Mara Ungureanu</option>
+	<option value="katrin">Katrin Wendland</option>
+	<option value="ivan">Giovanni Zaccanelli</option>
+	<option value="nobody">Nobody</option>
+    </select></br></br>    
+    
+    <div id="checkTheoremsDivision" style="margin: 10px">
+	<button id="checkTheorems" onclick="checkTheorems()">Confirm answer</button>
+	<script>
+	    function checkTheorems() {
+			var correctAnswers = 0;
+			if (document.getElementById("logic").value == "vera") {
+		    	correctAnswers +=1;
+			}
+			if (document.getElementById("appellHumbert").value == "andreas") {
+		    	correctAnswers +=1;
+			}
+			if (document.getElementById("atiyahSinger").value == "sebastian") {
+		    	correctAnswers +=1;
+			}
+			if (document.getElementById("belyi").value == "oliver") {
+		    	correctAnswers +=1;
+			}
+			if (document.getElementById("brouwer").value == "pedro") {
+		    	correctAnswers +=1;
+			}
+			if (document.getElementById("dirichlet").value == "annette") {
+		    	correctAnswers +=1;
+			}
+			if (document.getElementById("gln").value == "wolfgang") {
+		    	correctAnswers +=1;
+			}
+			if (document.getElementById("gabriel").value == "ivan") {
+		    	correctAnswers +=1;
+			}
+			if (document.getElementById("gaussBonnet").value == "jonasL") {
+				correctAnswers +=1;
+			}
+			if (document.getElementById("gerstenhaber").value == "jonasS") {
+		    	correctAnswers +=1;
+			}
+			if (document.getElementById("hironaka").value == "stefan") {
+		    	correctAnswers +=1;
+			}
+			if (document.getElementById("kroneckerWeber").value == "luca") {
+		    	correctAnswers +=1;
+			}
+			if (document.getElementById("tannaka").value == "nicola") {
+		    	correctAnswers +=1;
+			}
+			if (document.getElementById("modularForms").value == "fabian") {
+				correctAnswers +=1;
+			}
+			if (document.getElementById("enumerative").value == "mara") {
+		    	correctAnswers +=1;
+			}
+			if (document.getElementById("residue").value == "tanuj") {
+		    	correctAnswers +=1;
+			}
+			if (correctAnswers == 16) {
+		    	alert("Congratulations! You have gained the trust of the locals. You may go west now.")
+		    	document.getElementById("goSouth").style.display = "inline";
+			} else {
+		    	alert("Sorry, try again!")
+			}
+	    }
+	</script>
+    </div>
+    
     <p>You see mountains to the southwest, to the west and to the east.</p>
-    <div id="navigationButtonsDivision"></div>
+    <<div id="navigationButtonsDivision">
+	<script src="../scripts/navigationButtons.js"></script>
+	<button id="goWest" onclick="goWest()">Go west</button>
+	<button id="goNorth" onclick="goNorth()">Go north</button>
+	<button id="goSouth" style="display: none;" onclick="goSouth()">Go south</button>
+	<button id="goEast" onclick="goEast()">Go east</button>
+    </div>
     </body>
 
 </html>

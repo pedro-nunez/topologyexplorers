@@ -236,6 +236,58 @@
 	<option value="nobody">Nobody</option>
     </select></br></br>
     
+    <button data-modal-target="#brouwerButton" style="max-width: 500px;">Brouwer's fixed point theorem</button>
+    <div class="modal" id="brouwerButton">
+	<div class="modal-header">
+	    <div>Statement and explanation:</div>
+	    <button data-close-button class="close-button">&times;</button>
+	</div>
+    <div class="modal-body">
+	    <p style="text-align: left;">One of its impersonations states that any continuous map from the \(2\)-disk to itself must have a fixed point.
+	    So for example, suppose the following:
+	    <ol>
+	    <li>You have two sheets of paper on the table and you align them perfectly one on top of the other;</li>
+	    <li>You take the top sheet and crumple it into a ball;</li>
+	    <li>You leave the ball in the middle of the bottom sheet of paper, so that its vertical projection stays within the bottom sheet of paper;</li>
+	    </ol>
+	    Then there is some point in the ball of paper whose vertical projection is exactly the same point as it was originally, when the two sheets were aligned one on top of the other.</p>
+	</div>
+    </div>
+    <div id="overlay"></div></br>
+    <select name="brouwer" id="brouwer" style="margin: 10px">
+	<option value="none" selected disabled hidden>
+	Who said it?
+	</option>
+	<option value="severin">Severin Barmeier</option>
+	<option value="lukas">Lukas Braun</option>
+	<option value="oliver">Oliver Bräunling</option>
+	<option value="johan">Johannes Commelin</option>
+	<option value="andreas">Andreas Demleitner</option>
+	<option value="ksenia">Ksenia Fedosova</option>
+	<option value="vera">Vera Gahlen</option>
+	<option value="vincent">Vincent Gajda</option>
+	<option value="sebastian">Sebastian Goette</option>
+	<option value="tanuj">Tanuj Gomez</option>
+	<option value="nadine">Nadine Große</option>
+	<option value="andriy">Andriy Haydys</option>
+	<option value="fritz">Fritz Hörmann</option>
+	<option value="annette">Annette Huber-Klawitter</option>
+	<option value="stefan">Stefan Kebekus</option>
+	<option value="fabian">Fabian Kertels</option>
+	<option value="jonasL">Jonas Lenthe</option>
+	<option value="jin">Jin Li</option>
+	<option value="nicola">Nicola Nesa</option>
+	<option value="pedro">Pedro Núñez</option>
+	<option value="leonardo">Leonardo Patimo</option>
+	<option value="jonasS">Jonas Schnitzer</option>
+	<option value="wolfgang">Wolfgang Soergel</option>
+	<option value="luca">Luca Terenzi</option>
+	<option value="mara">Mara Ungureanu</option>
+	<option value="katrin">Katrin Wendland</option>
+	<option value="ivan">Giovanni Zaccanelli</option>
+	<option value="nobody">Nobody</option>
+    </select></br></br>
+    
     <button data-modal-target="#dirichletButton">Dirichlet's density theorem.</button>
     <div class="modal" id="dirichletButton">
 	<div class="modal-header">
@@ -551,6 +603,52 @@
 	<option value="nobody">Nobody</option>
     </select></br></br>
     
+    <button data-modal-target="#tannakaButton">Main theorem of Tannaka theory.</button>
+    <div class="modal" id="tannakaButton">
+	<div class="modal-header">
+	    <div>Statement and explanation:</div>
+	    <button data-close-button class="close-button">&times;</button>
+	</div>
+	<div class="modal-body">
+	    <p>&quotEvery neutral Tannakian category is equivalent to the category of finite dimensional representations of an affine group scheme.&quot</br></br>
+	    In other words, every category that has a notion of tensor product and duality modelled on the properties of the category of finite dimensional representations of an affine group scheme (or just vector spaces) is in fact such a category. Not only that, but there is an actual description of the affine group scheme. The upshot is that one can study any such category (and there are more interesting ones than one might suspect at first sight) using tools from representation theory, algebraic group theory, and the theory of commutative Hopf algebras. In a sense, this theorem is similar to the Freyd-Mitchell embedding theorem, stating that one can think of abelian categories as if the objects were modules over some ring. Here the scope is narrower (less categories), but the analogy is more explicit and powerful.</p>
+	</div>
+    </div>
+    <div id="overlay"></div></br>
+    <select name="tannaka" id="tannaka" style="margin: 10px">
+	<option value="none" selected disabled hidden>
+	Who said it?
+	</option>
+	<option value="severin">Severin Barmeier</option>
+	<option value="lukas">Lukas Braun</option>
+	<option value="oliver">Oliver Bräunling</option>
+	<option value="johan">Johannes Commelin</option>
+	<option value="andreas">Andreas Demleitner</option>
+	<option value="ksenia">Ksenia Fedosova</option>
+	<option value="vera">Vera Gahlen</option>
+	<option value="vincent">Vincent Gajda</option>
+	<option value="sebastian">Sebastian Goette</option>
+	<option value="tanuj">Tanuj Gomez</option>
+	<option value="nadine">Nadine Große</option>
+	<option value="andriy">Andriy Haydys</option>
+	<option value="fritz">Fritz Hörmann</option>
+	<option value="annette">Annette Huber-Klawitter</option>
+	<option value="stefan">Stefan Kebekus</option>
+	<option value="fabian">Fabian Kertels</option>
+	<option value="jonasL">Jonas Lenthe</option>
+	<option value="jin">Jin Li</option>
+	<option value="nicola">Nicola Nesa</option>
+	<option value="pedro">Pedro Núñez</option>
+	<option value="leonardo">Leonardo Patimo</option>
+	<option value="jonasS">Jonas Schnitzer</option>
+	<option value="wolfgang">Wolfgang Soergel</option>
+	<option value="luca">Luca Terenzi</option>
+	<option value="mara">Mara Ungureanu</option>
+	<option value="katrin">Katrin Wendland</option>
+	<option value="ivan">Giovanni Zaccanelli</option>
+	<option value="nobody">Nobody</option>
+    </select></br></br>
+    
     <button data-modal-target="#modularFormsButton" style="max-width: 500px">Let \(\mathcal{M} = \bigoplus_{k\in\mathbb{Z}}\mathcal{M}_{k}\) be the space of modular forms for \(\mathrm{SL}(2,\mathbb{Z})\), graded by weight \(k\). For even \(k > 2\), let \(E_k\) be the Eisenstein series of weight \(k\) for \(\mathrm{SL}(2,\mathbb{Z})\). Then \(\mathcal{M} = \mathbb{C}[E_4, E_6]\), that is, for all \(k \in \mathbb{Z}\), the space \(\mathcal{M}_k\) has a basis consisting of those monomials \(E_4^a E_6^b\) for which \(4a + 6b = k\).</button>
     <div class="modal" id="modularFormsButton">
 	<div class="modal-header">
@@ -641,19 +739,19 @@
 	<option value="nobody">Nobody</option>
     </select></br></br>
     
-    <button data-modal-target="#tannakaButton">Main theorem of Tannaka theory.</button>
-    <div class="modal" id="tannakaButton">
+    <button data-modal-target="#residueButton">Residue theorem.</button>
+    <div class="modal" id="residueButton">
 	<div class="modal-header">
 	    <div>Statement and explanation:</div>
 	    <button data-close-button class="close-button">&times;</button>
 	</div>
 	<div class="modal-body">
-	    <p>&quotEvery neutral Tannakian category is equivalent to the category of finite dimensional representations of an affine group scheme.&quot</br></br>
-	    In other words, every category that has a notion of tensor product and duality modelled on the properties of the category of finite dimensional representations of an affine group scheme (or just vector spaces) is in fact such a category. Not only that, but there is an actual description of the affine group scheme. The upshot is that one can study any such category (and there are more interesting ones than one might suspect at first sight) using tools from representation theory, algebraic group theory, and the theory of commutative Hopf algebras. In a sense, this theorem is similar to the Freyd-Mitchell embedding theorem, stating that one can think of abelian categories as if the objects were modules over some ring. Here the scope is narrower (less categories), but the analogy is more explicit and powerful.</p>
+	    <p>&quot;A contour integral in a simply connected domain of \(\mathbb{C}\) can be computed by counting poles and their residues constrained within the contour curve.&quot;</br></br>
+	    Who wouldn't want to draw keyholes to solve integrals?</p>
 	</div>
     </div>
     <div id="overlay"></div></br>
-    <select name="tannaka" id="tannaka" style="margin: 10px">
+    <select name="residue" id="residue" style="margin: 10px">
 	<option value="none" selected disabled hidden>
 	Who said it?
 	</option>
@@ -685,7 +783,7 @@
 	<option value="katrin">Katrin Wendland</option>
 	<option value="ivan">Giovanni Zaccanelli</option>
 	<option value="nobody">Nobody</option>
-    </select></br></br>
+    </select></br></br>    
     
     <div id="checkTheoremsDivision" style="margin: 10px">
 	<button id="checkTheorems" onclick="checkTheorems()">Confirm answer</button>
@@ -702,6 +800,9 @@
 		    	correctAnswers +=1;
 			}
 			if (document.getElementById("belyi").value == "oliver") {
+		    	correctAnswers +=1;
+			}
+			if (document.getElementById("brouwer").value == "pedro") {
 		    	correctAnswers +=1;
 			}
 			if (document.getElementById("dirichlet").value == "annette") {
@@ -725,16 +826,19 @@
 			if (document.getElementById("kroneckerWeber").value == "luca") {
 		    	correctAnswers +=1;
 			}
+			if (document.getElementById("tannaka").value == "nicola") {
+		    	correctAnswers +=1;
+			}
 			if (document.getElementById("modularForms").value == "fabian") {
 				correctAnswers +=1;
 			}
 			if (document.getElementById("enumerative").value == "mara") {
 		    	correctAnswers +=1;
 			}
-			if (document.getElementById("tannaka").value == "nicola") {
+			if (document.getElementById("residue").value == "tanuj") {
 		    	correctAnswers +=1;
 			}
-			if (correctAnswers == 14) {
+			if (correctAnswers == 16) {
 		    	alert("Congratulations! You have gained the trust of the locals. You may go west now.")
 		    	document.getElementById("goWest").style.display = "inline";
 			} else {
@@ -743,6 +847,7 @@
 	    }
 	</script>
     </div>
+    
     <p>You see mountains to the south, to the northwest and to the north.</p>
     <div id="navigationButtonsDivision">
 	<script src="../scripts/navigationButtons.js"></script>
