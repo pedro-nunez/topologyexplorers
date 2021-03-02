@@ -10,10 +10,40 @@
 	    jQuery("#navigationButtonsDivision").load("../navigationButtons.html");
 	});
     </script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     </head>
 
     <body style="text-align: center;">
     <div id="metaButtonsDivision"></div>
+    <div id="encounter">
+    <p>You meet a fellow mathematician who decides to test you before telling you about the path.</br>
+    &quot;So you've heard of Zariski cancellation... What about this kind of cancellation for nice topological spaces?
+    By this kind of cancellation I mean precisely the following:
+    \[ X\times I\cong Y\times I\Rightarrow X\cong Y,\]
+    where \(I=[0,1]\) is the closed unit interval and \(\cong\) means homeomorphic.&quot;</p>
+    <select id="answer" style="margin: 10px;">
+		<option value="none" selected disabled hidden>
+		Choose an answer</option>
+		<option value="incorrect">This kind of cancellation holds for any two topological spaces</option>
+		<option value="incorrect">This kind of cancellation doesn't hold in general, but it does for compact subsets of the real euclidean plane</option>
+		<option value="correct">None of the above is true</option>
+    </select>
+    <div style="margin: 10px;">
+    	<button id="check" onclick="checkAnswer()">Confirm answer</button>
+    	<script>
+    		function checkAnswer() {
+    			if (document.getElementById("answer").value == "correct") {
+    				alert("Correct! The old path that you are looking for used to pass by here, yes.");
+    				document.getElementById("encounter").style.display = "none";
+    			} else {
+    				alert("Incorrect... Sorry, I gotta go back to my blackboard now.");
+    				document.getElementById("encounter").style.display = "none";
+    			}
+    		}
+    	</script>
+    </div>
+    </div>
     <p>You see mountains to the southwest, to the west and to the northwest.</p>
     <div id="navigationButtonsDivision"></div>
     </body>

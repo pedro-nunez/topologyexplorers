@@ -10,10 +10,40 @@
 	    jQuery("#navigationButtonsDivision").load("../navigationButtons.html");
 	});
     </script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     </head>
 
     <body style="text-align: center;">
     <div id="metaButtonsDivision"></div>
+    <div id="encounter">
+    <p>You meet a fellow mathematician who decides to test you before telling you about the path.</br>
+    &quot;There are \(n\) participants in a BBB virtual room.
+    For the \(i\)-th participant, denote by \(a_{i}\) the number of participants in the room that this participant knows, without taking themself into account.
+    What is the smallest \(n > 1\) needed to ensure that all \(a_{i}\) are different?
+    &quot;</p>
+    <select id="answer" style="margin: 10px;">
+		<option value="none" selected disabled hidden>
+		Choose an answer</option>
+		<option value="incorrect">16</option>
+		<option value="incorrect">1024</option>
+		<option value="correct">No such n exists</option>
+    </select>
+    <div style="margin: 10px;">
+    	<button id="check" onclick="checkAnswer()">Confirm answer</button>
+    	<script>
+    		function checkAnswer() {
+    			if (document.getElementById("answer").value == "correct") {
+    				alert("Correct! The old path that you are looking for did not pass by here, no.");
+    				document.getElementById("encounter").style.display = "none";
+    			} else {
+    				alert("Incorrect... Sorry, I gotta go back to my blackboard now.");
+    				document.getElementById("encounter").style.display = "none";
+    			}
+    		}
+    	</script>
+    </div>
+    </div>
     <p>You see a mountain to the north.</p>
     <div id="navigationButtonsDivision"></div>
     </body>

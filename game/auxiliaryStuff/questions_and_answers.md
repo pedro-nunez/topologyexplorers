@@ -4,95 +4,115 @@
 
 ### Math questions
 
-Q(8_12)
-Q(8_11)
-Q(8_8)
+Q(8_12) random
 
-Q(8_13) [Eng98, I.E2]
-A(8_13) Always Alice
+Q(8_11) Smallest n such that... [Hat01, Ex. 0.6.c]
+A(8_11) 2
 
-Q(7_4) [arxiv.org/abs/math/0601525v5, Figure 2]
-A(7_4) Unknot
+Q(8_8) coding problem
 
-Q(7_5) [Har00, xca. 2.4]
-A(7_5) 3
+oQ(8_13) [Eng98, I.E2]
+oA(8_13) Always Alice
 
-Q(4_9) [Eng98, I.5]
-A(4_9) No
+oQ(7_4) [arxiv.org/abs/math/0601525v5, Figure 2]
+oA(7_4) Unknot
 
-Q(4_7)
-Q(4_6)
-Q(4_10)
+oQ(7_5) [Har00, xca. 2.4]
+oA(7_5) 3
 
-Q(2_9) [Wikipedia's Knot table, 6_{3}]
-A(2_9) Not unknot
+oQ(4_9) [Eng98, I.5]
+oA(4_9) No
 
-Q(2_15) Which of the following is not equivalent to AC?
-A(2_15) Every field has an algebraic closure.
+Q(4_7) [Eng98, IV.E1]
+A(4_7) Yes
 
-Q(2_1) [Eng98, I.35]
-A(2_1) There aren't any
+Q(4_6) [Eng98, IV.E3]
+A(4_6) True
 
-Q(2_6) Open set in \(\mathbb{R}\) containing all rationals but with arbitrarily small measure?
-A(2_6) Yes, but not 0
+Q(4_10) n such that the unit ball of dimension n has maximum volume [saber y beber]
+A(4_10) n=5
 
-Q(2_14) [Har00, xca. 4.3]
-A(2_14) 7 steps
+oQ(2_9) [Wikipedia's Knot table, 6_{3}]
+oA(2_9) Not unknot
 
-Q(6_11)
-Q(6_3)
-Q(1_3)
+oQ(2_15) Which of the following is not equivalent to AC?
+oA(2_15) Every field has an algebraic closure.
 
-Q(1_7) [en.wikipedia.org/wiki/Knot_theory#/media/File:Knot_Unfolding.gif]
-A(1_7) Unknot
+oQ(2_1) [Eng98, I.35]
+oA(2_1) There aren't any
 
-Q(1_8) [arxiv.org/abs/math/0601525v5, Figure 3]
-A(1_8) Unknot
+oQ(2_6) Open set in \(\mathbb{R}\) containing all rationals but with arbitrarily small measure?
+oA(2_6) Yes, but not 0
 
-Q(1_13)
+oQ(2_14) [Har00, xca. 4.3]
+oA(2_14) 7 steps
 
-Q(3_4) ZFC statements and n-colourable maps. What is n?
-A(3_4) 3
+Q(6_11) Random
 
-Q(3_1) [Eng98, I.E3]
-A(3_1) No
+Q(6_3) [Eng98, III.E8]
+A(6_3) True
 
-Q(9_11) [Har00, xca. 3.4]
-A(9_11) We can square a rectangle but not a circle
+oQ(1_7) [en.wikipedia.org/wiki/Knot_theory#/media/File:Knot_Unfolding.gif]
+oA(1_7) Unknot
 
-Q(9_15)
-Q(10_12)
-Q(10_4)
-Q(13_16)
-Q(13_11)
+oQ(1_8) [arxiv.org/abs/math/0601525v5, Figure 3]
+oA(1_8) Unknot
 
-Q(13_15) [Eng98, I.E1]
-A(13_15) Both converge to \(\sqrt{ab}\)
+Q(1_13) House with two rooms
+a(1_13) Contractible
 
-Q(13_13) Granny vs square
-A(13_13) Not equivalent
+oQ(3_4) ZFC statements and n-colourable maps. What is n?
+oA(3_4) 3
 
-Q(5_4)
+oQ(3_1) [Eng98, I.E3]
+oA(3_1) No
 
-Q(5_6) What is the number of faces plus the number of vertices minus the number of edges of an icosahedron? ©Saber y Beber
-A(5_6) 2
+oQ(9_11) [Har00, xca. 3.4]
+oA(9_11) We can square a rectangle but not a circle
 
-Q(15_11)
+Q(9_15) Random
+Q(10_12) Random
+Q(10_4) Coding problem
 
-Q(15_15) Figure 8 vs its mirror image
-A(15_15) Equivalent
+Q(13_16) [Eng98, II.18]
+A(13_16) True
 
-Q(15_5)
-Q(15_2)
-Q(11_16)
+Q(13_11) Goldbach was writing to
+A(13_11) Euler
 
-Q(11_6) Which proposition is the first one to contain a mistake in Euclid's elements?
-A(11_6) Book I proposition 1
+oQ(13_15) [Eng98, I.E1]
+oA(13_15) Both converge to \(\sqrt{ab}\)
 
-Q(16_11) What can be seen in Archimedes' tombstone? ©Saber y Beber
-A(16_11) A sphere inscribed in a cylinder
+oQ(13_13) Granny vs square
+oA(13_13) Not equivalent
 
-Q(16_14)
+Q(5_4) How many planar crystallographic groups are there?
+A(5_4) 17
+
+oQ(5_6) What is the number of faces plus the number of vertices minus the number of edges of an icosahedron? ©Saber y Beber
+oA(5_6) 2
+
+Q(15_11) How many platonic solids
+A(15_11) 5
+
+oQ(15_15) Figure 8 vs its mirror image
+oA(15_15) Equivalent
+
+Q(15_5) Coding problem
+
+Q(15_2) Zariski cancellation in topology?
+A(15_2) No!
+
+Q(11_16) Coding problem
+
+oQ(11_6) Which proposition is the first one to contain a mistake in Euclid's elements?
+oA(11_6) Book I proposition 1
+
+oQ(16_11) What can be seen in Archimedes' tombstone? ©Saber y Beber
+oA(16_11) A sphere inscribed in a cylinder
+
+Q(16_14) [Eng98, II.13] Alice and Bob play, Bob wins if he finds a rectangle.
+A(16_14) Bob always wins
 
 ### Science questions
 
