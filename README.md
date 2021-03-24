@@ -2,6 +2,10 @@
 
 HTML game for virtual Oberharmersbach 2021
 
+# Current status
+
+Not up to date; wait until game ends and then upload with the changes that were necessary!
+
 # TO-DO
 
 - [ ] Chess puzzle.
